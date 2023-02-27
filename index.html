@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--projecttitle--><title>TRƯỜNG ĐẠI HỌC SAO ĐỎ</title><!--projecttitle-end-->
+    <!--projectdescription-->
+    <meta name="description" content="New 3Sixty Virtual Tour Project"><!--projectdescription-end-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"-->
+    <!--          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">-->
+    <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"-->
+    <!--            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"-->
+    <!--            crossorigin="anonymous"></script>-->
+    <!--    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"-->
+    <!--            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"-->
+    <!--            crossorigin="anonymous"></script>-->
+    <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"-->
+    <!--            integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"-->
+    <!--            crossorigin="anonymous"></script>-->
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Insert this line above script imports  -->
+
+
+    <script>if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+    }</script>
+
+    <script src="imagedata.js"></script>
+    <script src="jquery.js"></script>
+    <script src="three.min.js"></script>
+    <script src="panolens.min.js"></script>
+
+    <!-- Insert this line after script imports -->
+    <script>if (window.module) module = window.module;</script>
+
+    <style>
+
+
+        /* SCROLLBAR STYLING */
+        /* width */
+        ::-webkit-scrollbar {
+            width: 0.25em;
+            height: 0.25em;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #2c3643;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #0d9e59;
+            transition: background .5s;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00e075;
+        }
+
+
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+            position: relative;
+
+        }
+
+        a:link, a:visited {
+            color: #bdc3c7;
+        }
+
+        .fullwrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: black;
+        }
+
+        #container {
+            width: 100%;
+            height: 100%;
+        }
+
+        #tmp {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 3em;
+            background-color: rgba(0, 0, 0, .5);
+            backdrop-filter: blur(5px);
+            display: none;
+        }
+
+        .rotate {
+            transition: all 0.4s linear;
+        }
+
+        .rotate-180 {
+            transform: rotate(180deg);
+            transition: transform 0.4s;
+        }
+
+        .ul::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        .ul::-webkit-scrollbar-thumb {
+            background-color: transparent;
+        }
+
+        .panolens-canvas:active {
+            cursor: all-scroll;
+        }
+
+        .owl-carousel {
+            background: transparent;
+
+        }
+
+        .owl-carousel .item {
+
+            width: 100%;
+            border: 4px solid #d90e0e;
+
+        }
+
+        .owl-carousel .item :hover {
+            cursor: pointer;
+        }
+
+        .owl-carousel .item img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .owl-carousel .item .text {
+            text-align: center;
+            position: absolute;
+            background-color: #d90e0e;
+            bottom: -70%;
+            color: white;
+            width: 100%;
+            transition-property: bottom;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in-out;
+
+        }
+
+        .owl-carousel .item:hover .text {
+
+            bottom: 0;
+        }
+
+        .tooltip {
+            font-family: Sora, sans-serif;
+            font-weight: 300;
+            line-height: 1.4;
+            font-size: 0.8rem;
+        }
+
+        .bs-tooltip-top .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
+            border-top-color: blue;
+        }
+
+        .bs-tooltip-end .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
+            border-right-color: blue;
+        }
+
+        .bs-tooltip-bottom .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
+            border-bottom-color: blue;
+        }
+
+        .bs-tooltip-start .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
+            border-left-color: blue;
+        }
+
+        .tooltip-inner {
+            color: #fff;
+            border: 1px solid white;
+            background-color: blue;
+        }
+
+
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.js"></script>
+</head>
+<body id="body">
+
+
+<div class="layout" style="position: absolute;">
+    <div class="sidenav">
+        <div class="menu">
+            <button style="z-index: 2;margin-top: 9vh;position: absolute; height: 70px;border-bottom-right-radius:70px;border-top-right-radius:70px;background-color: #0d6efd;border: 2px solid #d90e0e"
+                    class="" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" id="sidebarCollapse"><i
+                    class="fa-solid fa-angles-right rotate" id="iconSideNav" style="color: white;font-size: 20px"></i>
+            </button>
+
+            <div style="background-color: transparent;z-index: 1;height: 80%;margin-top: 5vh;border-radius: 30px;border: 2px solid #d90e0e"
+                 class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                 id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header"
+                     style="height: 130px;display: flex;background-color: #0d6efd;border-top-left-radius: 30px;border-top-right-radius: 30px">
+                    <img src="./images/logoSaodo.png" alt="" style="height: 100%;margin-left: 30px;">
+                    <div class="" style="text-align: center;margin-right: 30px;">
+                        <p style="font-size: 40px;font-weight: bold;color: #d90e0e">SAODO <span
+                                style="font-size: 30px;font-weight: bold">UNIVERSITY</span></p>
+                    </div>
+                </div>
+                <div class="offcanvas-body"
+                     style="border-bottom-right-radius: 30px;border-bottom-left-radius:30px;background: rgba(255,255,255,0.7);overflow: hidden;">
+                    <div class="ul" role="group" aria-label="Basic radio" style="overflow-y: scroll;height: 100%;">
+                        <div class="mainMenu">
+                            <p class="text_mainMenu">TỔNG QUAN KHUÔN VIÊN CỔNG TRƯỜNG</p>
+                        </div>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                        <label
+                                style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                class="btn btn-outline-danger listLInk" for="btnradio1">Cổng trường</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                        <label onclick="ChangePanorama('station24bay')"
+                               style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio2">Vườn trường</label>
+                        <div class="mainMenu">
+                            <p class="text_mainMenu">GIẢNG ĐƯỜNG A</p>
+                        </div>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                        <label onclick="ChangePanorama('img')"
+                               style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio3">Sảnh nhà A</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio4">Hòn Non Bộ </label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio5">Phòng hội thảo</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio6">Phòng đào tạo</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio7">Phòng tuyển sinh</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio8">Phòng quản trị </label>
+                        <div class="mainMenu">
+                            <p class="text_mainMenu">NHÀ B</p>
+                        </div>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio9">Sảnh trước</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio10" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio10">Sảnh chính</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio11" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio11">Phòng tổ chức - hành
+                            chính</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio12" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio12">Phòng Họp</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio13" autocomplete="off"
+                        >
+                        <label onclick="ChangePanorama('sanhchokinhte')"
+                               style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio13">Sảnh chờ(khoa kinh tế)</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio14" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio14">Sảnh chờ(khoa du lịch & ngoại
+                            ngữ)</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio15" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio15">Phòng truyền thống</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio16" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio16">Sảnh truyền thống</label>
+
+                        <div class="mainMenu">
+                            <p class="text_mainMenu">HỘI TRƯỜNG</p>
+                        </div>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio17" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio17">Sảnh trước & đài phun
+                            nước</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio18" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio18">Hội trường</label>
+
+                        <div class="mainMenu">
+                            <p class="text_mainMenu">KHU TIỆN ÍCH</p>
+                        </div>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio19" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio19">Khu phức hợp thể thao</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio20" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio20"> Khu căng tin – cà phê</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio21" autocomplete="off">
+                        <label onclick="ChangePanorama('khuvuckituc')"
+                               style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio21">Khu kí túc xá</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio22" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio22">Trung tâm thông tin – thư
+                            viện</label>
+
+                        <div class="mainMenu">
+                            <p class="text_mainMenu">TRUNG TÂM THỰC HÀNH & THỰC NGHIỆM</p>
+                        </div>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio23" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio23">Khoa điện</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio24" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio24">Khoa ô tô</label>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio25" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio25">Khoa cơ Khí</label>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio26" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio26">Khoa công nghệ thông tin</label>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio27" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio27">Khoa may và thời trang</label>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio28" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio28">Khoa thực phẩm và hóa
+                            học</label>
+                        <div class="mainMenu">
+                            <p class="text_mainMenu">KHOA CÔNG NGHỆ THÔNG TIN</p>
+                        </div>
+                        <input onclick="ChangePanorama('tongquanngoaixuongX4')" type="radio" class="btn-check"
+                               name="btnradio" id="btnradio29" autocomplete="off" checked>
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio29">Tổng quan bên ngoài</label>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio30" autocomplete="off">
+                        <label onclick="ChangePanorama('hanhlangCNTT')"
+                               style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio30">Hành lang</label>
+                        <input onclick="ChangePanorama('khonggiansangtaoCNTT')" type="radio" class="btn-check"
+                               name="btnradio" id="btnradio31" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio31">Không gian sáng tạo</label>
+                        <input onclick="ChangePanorama('phonghocCNTT')" type="radio" class="btn-check" name="btnradio"
+                               id="btnradio32" autocomplete="off">
+                        <label style="width: 100%;text-align: left;border: none;border-radius: 0"
+                               class="btn btn-outline-danger listLInk" for="btnradio32">Phòng học</label>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="map">
+            <div style="width: 610px;height: 450px;border: 3px solid red" class="offcanvas offcanvas-end"
+                 data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling1"
+                 aria-labelledby="offcanvasScrollingLabel">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3129.889067409314!2d106.39482492310081!3d21.10912338346499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31357909df4b3bff%3A0xd8784721e55d91ca!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBTYW8gxJDhu48!5e0!3m2!1svi!2s!4v1667893798451!5m2!1svi!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <button style="position: absolute;top: 5px;left: 5px;background-color: blue;opacity: 1;" type="button"
+                        class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+        </div>
+
+        <div class="listImage">
+            <div style="z-index: 0;background: rgba(255,0,0,0.7);height: 170px;" class="offcanvas offcanvas-bottom"
+                 data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling2"
+                 aria-labelledby="offcanvasScrollingLabel">
+                <div class="owl-carousel">
+                    <div class="item"
+                         onclick="ChangePanorama('tongquanbenngoaixuongX4');document.getElementById('btnradio29').click()"
+                         style="position: relative;">
+                        <img src="panoramas_small/tongquanngoaixuongX4.jpg"
+                             alt="image"/>
+                        <div class="text">
+                            Tổng quan bên ngoài xưởng X4
+                        </div>
+                    </div>
+                    <div class="item"
+                         onclick="ChangePanorama('hanhlangCNTT');document.getElementById('btnradio30').click()">
+                        <img src="panoramas_small/hanhlangCNTT.jpg"
+                             alt="image"/>
+                        <div class="text">
+                            Hành lang CNTT
+                        </div>
+                    </div>
+                    <div class="item"
+                         onclick="ChangePanorama('khonggiansangtaoCNTT');document.getElementById('btnradio31').click()">
+                        <img src="panoramas_small/khonggiansangtaoCNTT.jpg"
+                             alt="image"/>
+                        <div class="text">
+                            Không gian sáng tạo CNTT
+                        </div>
+                    </div>
+                    <div class="item"
+                         onclick="ChangePanorama('phonghocCNTT');document.getElementById('btnradio32').click()">
+                        <img src="panoramas_small/phonghocCNTT.jpg"
+                             alt="image"/>
+                        <div class="text">
+                            Phòng học CNTT
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="panoramas/khuvuckituc.jpg"
+                             alt="image"/>
+                        <div class="text">
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="panoramas/sanhchokinhte.jpg"
+                             alt="image"/><div class="text">
+
+                    </div>
+                    </div>
+                    <div class="item">
+                        <img src="panoramas/khuvuckituc.jpg"
+                             alt="image"/><div class="text">
+
+                    </div>
+                    </div>
+                    <div class="item">
+                        <img src="panoramas/sanhchokinhte.jpg"
+                             alt="image"/><div class="text">
+
+                    </div>
+                    </div>
+                    <div class="item">
+                        <img src="panoramas/khuvuckituc.jpg"
+                             alt="image"/><div class="text">
+
+                    </div>
+                    </div>
+                    <div class="item">
+                        <img src="panoramas/sanhchokinhte.jpg"
+                             alt="image"/><div class="text">
+
+                    </div>
+                    </div>
+                    <div class="item">
+                        <img src="panoramas/khuvuckituc.jpg"
+                             alt="image"/><div class="text">
+
+                    </div>
+                    </div>
+                    <div class="item">
+                        <img src="panoramas/sanhchokinhte.jpg"
+                             alt="image"/><div class="text">
+
+                    </div>
+                    </div>
+                    <div class="item">
+                        <img src="panoramas/khuvuckituc.jpg"
+                             alt="image"/><div class="text">
+
+                    </div>
+                    </div>
+                    <div class="item">
+                        <img src="panoramas/sanhchokinhte.jpg"
+                             alt="image"/><div class="text">
+
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="menu-bottom" style="width: 100vw;height: 43px;background: rgba(255,0,0,0.7);position: fixed;bottom: 0;">
+        <div class="content" style="margin-top: 2px;display: flex;justify-content: center">
+            <button style="margin-left: 20px;" data-bs-placement="top" data-bs-title="Vị trí" class="btn btn-primary"
+                    type="button"
+                    data-toggle="tooltip" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling1"
+                    aria-controls="offcanvasScrolling1">
+                <i class="fa-solid fa-location-dot"></i>
+            </button>
+            <button style="margin-left: 20px;" data-bs-placement="top" data-bs-title="Danh sách ảnh"
+                    class="btn btn-primary" type="button"
+                    data-toggle="tooltip" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling2"
+                    aria-controls="offcanvasScrolling1">
+                <i class="fa-solid fa-table-cells-large"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!--customhtml-->
+<div class='customhotspot' id='sanhchokinhte'></div>
+<div class='customhotspot' id='khuvuckituc'></div>
+<div class='customhotspot' id='tongquanngoaixuongX4'></div>
+<div class='customhotspot' id='phonghocCNTT'></div>
+<div class='customhotspot' id='hanhlangCNTT'></div>
+<div class='customhotspot' id='khonggiansangtaoCNTT'></div><!--customhtml-end-->
+<div id="tmp" style="position: absolute;">
+    <div style="width: 100%; height: 100%; overflow: hidden; overflow-y: auto; box-sizing: border-box; position: relative;"
+         id="tmpcontent"></div>
+    <div class="mediaclosebutton" onclick="hideTemp()"><i class="fa fa-times-circle"></i></div>
+</div>
+
+<!--loading-->
+<div id="loading" class="fullwrapper"
+     style="display: table; width: 100%; height: 100%;background-color:white;opacity: 1;z-index: 10">
+    <div style="display: table-cell; vertical-align: middle; text-align: center; color: white; font-size: 30px; padding: 50px;">
+        <img style="height: 300px;" src="images/logoSaodo.png" alt="">
+    </div>
+</div>
+<script>
+    $("#sidebarCollapse").click(function () {
+        $("#iconSideNav").toggleClass("rotate-180");
+    })
+</script>
+
+<script>
+    var container = document.querySelector('#container');
+    /*panolens*/
+
+    var viewer = new PANOLENS.Viewer({
+        container: container,
+        controlBar: true,
+        output: 'console',
+        autoHideInfospot: false,
+    });
+
+    /*panolens-end*/
+
+    viewer.addUpdateCallback(function () {
+    });
+
+    /*panoramas*/
+
+    var sanhchokinhte = new PANOLENS.ImagePanorama("panoramas/sanhchokinhte.jpg");
+    sanhchokinhte.addEventListener('progress', function (e) {
+        $("#loading").show();
+    });
+    sanhchokinhte.addEventListener('load', function (e) {
+        //$("#loading").fadeOut();
+    });
+    sanhchokinhte.addEventListener('click', function (e) {
+    });
+
+
+    viewer.add(sanhchokinhte);
+
+    var khuvuckituc = new PANOLENS.ImagePanorama("panoramas/khuvuckituc.jpg");
+    khuvuckituc.addEventListener('progress', function (e) {
+        $("#loading").show();
+    });
+    khuvuckituc.addEventListener('load', function (e) {
+        //$("#loading").fadeOut();
+    });
+    khuvuckituc.addEventListener('click', function (e) {
+    });
+
+
+    viewer.add(khuvuckituc);
+
+    var tongquanngoaixuongX4 = new PANOLENS.ImagePanorama("panoramas/tongquanngoaixuongX4.jpg");
+    tongquanngoaixuongX4.addEventListener('progress', function (e) {
+        $("#loading").show();
+    });
+    tongquanngoaixuongX4.addEventListener('load', function (e) {
+        //$("#loading").fadeOut();
+    });
+    tongquanngoaixuongX4.addEventListener('click', function (e) {
+    });
+
+
+    var infospottongquanngoaixuongX40 = new PANOLENS.Infospot(512, hotspotIcons[5].data, true);
+    infospottongquanngoaixuongX40.position.set(-1182.69, 1664.35, -4553.89);
+    tongquanngoaixuongX4.add(infospottongquanngoaixuongX40);
+
+    infospottongquanngoaixuongX40.addEventListener('click', function () {
+
+        ChangePanorama('hanhlangCNTT');
+
+        document.getElementById('btnradio30').click()
+
+    });
+
+    viewer.add(tongquanngoaixuongX4);
+
+    var phonghocCNTT = new PANOLENS.ImagePanorama("panoramas/phonghocCNTT.jpg");
+    phonghocCNTT.addEventListener('progress', function (e) {
+        $("#loading").show();
+    });
+    phonghocCNTT.addEventListener('load', function (e) {
+        //$("#loading").fadeOut();
+    });
+    phonghocCNTT.addEventListener('click', function (e) {
+    });
+
+
+    var infospotphonghocCNTT0 = new PANOLENS.Infospot(512, hotspotIcons[11].data, true);
+    infospotphonghocCNTT0.position.set(-4744.33, -238.64, -1547.48);
+    phonghocCNTT.add(infospotphonghocCNTT0);
+
+    infospotphonghocCNTT0.addEventListener('click', function () {
+
+        ChangePanorama('hanhlangCNTT');
+
+        document.getElementById('btnradio30').click()
+
+    });
+
+    viewer.add(phonghocCNTT);
+
+    var hanhlangCNTT = new PANOLENS.ImagePanorama("panoramas/hanhlangCNTT.jpg");
+    hanhlangCNTT.addEventListener('progress', function (e) {
+        $("#loading").show();
+    });
+    hanhlangCNTT.addEventListener('load', function (e) {
+        //$("#loading").fadeOut();
+    });
+    hanhlangCNTT.addEventListener('click', function (e) {
+    });
+
+
+    var infospothanhlangCNTT0 = new PANOLENS.Infospot(512, hotspotIcons[6].data, true);
+    infospothanhlangCNTT0.position.set(-4199.93, -2358.31, 1324.06);
+    hanhlangCNTT.add(infospothanhlangCNTT0);
+
+    infospothanhlangCNTT0.addEventListener('click', function () {
+
+        ChangePanorama('phonghocCNTT');
+
+        document.getElementById('btnradio32').click()
+
+    });
+
+    var infospothanhlangCNTT1 = new PANOLENS.Infospot(512, hotspotIcons[6].data, true);
+    infospothanhlangCNTT1.position.set(-316.00, -1576.94, 4726.97);
+    hanhlangCNTT.add(infospothanhlangCNTT1);
+
+    infospothanhlangCNTT1.addEventListener('click', function () {
+
+        ChangePanorama('tongquanngoaixuongX4');
+
+        document.getElementById('btnradio29').click()
+
+    });
+
+    var infospothanhlangCNTT2 = new PANOLENS.Infospot(512, hotspotIcons[6].data, true);
+    infospothanhlangCNTT2.position.set(409.13, -859.15, -4901.69);
+    hanhlangCNTT.add(infospothanhlangCNTT2);
+
+    infospothanhlangCNTT2.addEventListener('click', function () {
+
+        ChangePanorama('khonggiansangtaoCNTT');
+
+        document.getElementById('btnradio31').click()
+
+    });
+
+    viewer.add(hanhlangCNTT);
+
+    var khonggiansangtaoCNTT = new PANOLENS.ImagePanorama("panoramas/khonggiansangtaoCNTT.jpg");
+    khonggiansangtaoCNTT.addEventListener('progress', function (e) {
+        $("#loading").show();
+    });
+    khonggiansangtaoCNTT.addEventListener('load', function (e) {
+        //$("#loading").fadeOut();
+    });
+    khonggiansangtaoCNTT.addEventListener('click', function (e) {
+    });
+
+
+    var infospotkhonggiansangtaoCNTT0 = new PANOLENS.Infospot(512, hotspotIcons[6].data, true);
+    infospotkhonggiansangtaoCNTT0.position.set(-3967.98, -1311.08, -2729.97);
+    khonggiansangtaoCNTT.add(infospotkhonggiansangtaoCNTT0);
+
+    infospotkhonggiansangtaoCNTT0.addEventListener('click', function () {
+
+        ChangePanorama('hanhlangCNTT');
+
+        document.getElementById('btnradio30').click()
+
+    });
+
+    viewer.add(khonggiansangtaoCNTT);
+
+    $(document).ready(function () {
+        ChangePanorama('tongquanngoaixuongX4');
+    });
+
+
+    /*panoramas-end*/
+
+
+    function hideTemp() {
+        $("#tmp").fadeOut();
+        setTimeout(function () {
+            $("#tmpcontent").html("");
+        }, 1000);
+    }
+
+    function showMedia(type, content) {
+        switch (type) {
+            case 1 :
+                //Image
+                $("#tmpcontent").html("<img src='" + content + "' style='width: 100%;'>");
+                $("#tmp").fadeIn();
+                break;
+            case 2 :
+                //Video
+                $("#tmpcontent").html("<video id='webvideo' controls autoplay style='width: 100%; height: 100%;'><source src='" + content + "' type='video/mp4'> Your browser does not support the video tag. </video>");
+                $("#tmp").fadeIn();
+                break;
+            case 3 :
+                //Audio
+                $("#tmpcontent").html("<audio controls style='width: 100%;'><source src='" + content + "' type='audio/ogg'>Your browser does not support the audio tag.</audio>");
+                $("#tmp").fadeIn();
+                break;
+            case 4 :
+                //PDF
+                $("#tmpcontent").html("<iframe src='pdfjs/web/viewer.html?file=../../" + content + "' style='width: 100%; height: 99%;'></iframe>");
+                $("#tmp").fadeIn();
+                break;
+        }
+    }
+
+
+    //Update Callback
+    viewer.addUpdateCallback(function () {
+
+        /*viewerupdatecallback*/
+        if (viewer.panorama == sanhchokinhte) {
+        }
+
+        if (viewer.panorama == khuvuckituc) {
+        }
+
+        if (viewer.panorama == tongquanngoaixuongX4) {
+        }
+
+        if (viewer.panorama == phonghocCNTT) {
+        }
+
+        if (viewer.panorama == hanhlangCNTT) {
+        }
+
+        if (viewer.panorama == khonggiansangtaoCNTT) {
+        }
+        /*viewerupdatecallback-end*/
+
+
+    });
+
+
+    var hotspotsvisible = true;
+
+    function ShowMyInfospot(hs, elid) {
+        var thehs = toScreenPosition(hs);
+        if (thehs.z < 1) {
+            $("#" + elid).css({
+                "top": (thehs.y - ($("#" + elid).height() / 2)) + "px",
+                "left": (thehs.x - ($("#" + elid).width() / 2)) + "px",
+            });
+            if (hotspotsvisible)
+                $("#" + elid).show();
+        } else {
+            $("#" + elid).hide();
+        }
+
+    }
+
+    function toScreenPosition(obj) {
+        var vector = new THREE.Vector3();
+        var widthHalf = 0.5 * innerWidth;
+        var heightHalf = 0.5 * innerHeight;
+
+        //obj.updateMatrixWorld();
+        vector.setFromMatrixPosition(obj.matrixWorld);
+
+
+        vector.project(viewer.camera);
+
+        vector.x = (vector.x * widthHalf) + widthHalf;
+        vector.y = -(vector.y * heightHalf) + heightHalf;
+
+
+        return {
+            x: vector.x,
+            y: vector.y,
+            z: vector.z,
+        };
+
+    };
+
+    var currentPanorama;
+
+    function ChangePanorama(panorama) {
+        currentPanorama = panorama;
+        HideInfospots();
+        $("#loading").fadeIn();
+        //$(".customhotspot").fadeOut();
+        setTimeout(function () {
+            viewer.setPanorama(window[panorama]);
+        }, 100);
+        setTimeout(function () {
+            $("#" + panorama).fadeIn();
+            $("#loading").fadeOut();
+        }, 1000);
+
+    }
+
+
+    function HideInfospots() {
+        $(".customhotspot").fadeOut();
+    }
+
+    /*customjs*//*customjs-end*/
+</script>
+
+<!--olw carousel-->
+<script>
+
+    $(document).ready(function () {
+
+        $(".owl-carousel").owlCarousel({
+            margin: 5,
+            items: 11,
+            itemsDesktop: [1199, 3],
+            itemsDesktopSmall: [979, 3],
+            center: true,
+            nav: true,
+            loop: true,
+
+            responsive: {
+                600: {
+                    items: 4
+                }
+            }
+        });
+    });
+</script>
+
+<!--tooltip-->
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+</script>
+</body>
+</html><!--loadingtext-->Loading...<!--loadingtext-end-->undefined
