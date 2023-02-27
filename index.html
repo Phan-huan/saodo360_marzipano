@@ -528,7 +528,12 @@
 </div>
 
 <!--loading-->
-
+<div id="loading" class="fullwrapper"
+     style="display: table; width: 100%; height: 100%;background-color:white;opacity: 1;z-index: 10">
+    <div style="display: table-cell; vertical-align: middle; text-align: center; color: white; font-size: 30px; padding: 50px;">
+        <img style="height: 300px;" src="images/logoSaodo.png" alt="">
+    </div>
+</div>
 <script>
     $("#sidebarCollapse").click(function () {
         $("#iconSideNav").toggleClass("rotate-180");
@@ -839,7 +844,10 @@ if(viewer.panorama == khuvuckituc){
 
             responsive: {
                 0: {
-                    items: 3
+                    items: 2
+                },
+                400:{
+                    items:3
                 },
                 600: {
                     items: 4
