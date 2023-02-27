@@ -32,8 +32,6 @@
     <script src="jquery.js"></script>
     <script src="three.min.js"></script>
     <script src="panolens.min.js"></script>
-    <script src="loading.js"></script>
-
 
     <!-- Insert this line after script imports -->
     <script>if (window.module) module = window.module;</script>
@@ -588,7 +586,7 @@
 </div>
 
 <!--loading-->
-<div id="preloader"
+<div id="loading" class="fullwrapper"
      style="display: table; width: 100%; height: 100%;background-color:white;opacity: 1;z-index: 10">
     <div style="display: table-cell; vertical-align: middle; text-align: center; color: white; font-size: 30px; padding: 50px;">
         <img style="height: 300px;" src="images/logoSaodo.png" alt="">
@@ -875,7 +873,7 @@ if(viewer.panorama == khuvuckituc){
         currentPanorama = panorama;
         HideInfospots();
         $("#loading").fadeIn();
-        //$(".customhotspot").fadeOut();
+        $(".customhotspot").fadeOut();
         setTimeout(function () {
             viewer.setPanorama(window[panorama]);
         }, 100);
