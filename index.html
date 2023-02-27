@@ -592,15 +592,15 @@
     </div>
 </div>
 
-<div style="display: none">
-    <img src="panoramas/khonggiansangtaoCNTT.jpg" alt="">
-    <img src="panoramas/phonghocCNTT.jpg" alt="">
-    <img src="panoramas/hanhlangCNTT.jpg" alt="">
-    <img src="panoramas/tongquanngoaixuongX4.jpg" alt="">
-    <img src="panoramas/sanhchokinhte.jpg" alt="">
-    <img src="panoramas/khuvuckituc.jpg" alt="">
+<!--<div style="display: none">-->
+<!--    <img src="panoramas/khonggiansangtaoCNTT.jpg" alt="">-->
+<!--    <img src="panoramas/phonghocCNTT.jpg" alt="">-->
+<!--    <img src="panoramas/hanhlangCNTT.jpg" alt="">-->
+<!--    <img src="panoramas/tongquanngoaixuongX4.jpg" alt="">-->
+<!--    <img src="panoramas/sanhchokinhte.jpg" alt="">-->
+<!--    <img src="panoramas/khuvuckituc.jpg" alt="">-->
 
-</div>
+<!--</div>-->
 <script>
     $("#sidebarCollapse").click(function () {
         $("#iconSideNav").toggleClass("rotate-180");
@@ -622,10 +622,10 @@ var viewer = new PANOLENS.Viewer( { container: container , controlBar: true,  ou
 
 var tongquanngoaixuongX4 = new PANOLENS.ImagePanorama( "panoramas/tongquanngoaixuongX4.jpg" );
 			tongquanngoaixuongX4.addEventListener('progress', function(e){
-
+                $("#loading").show();
 			});
 			tongquanngoaixuongX4.addEventListener('load', function(e){
-				//$("#loading").fadeOut();
+				$("#loading").fadeOut();
 			});
 			tongquanngoaixuongX4.addEventListener('click', function(e){
 			});
@@ -647,10 +647,10 @@ viewer.add( tongquanngoaixuongX4 );
 
 var phonghocCNTT = new PANOLENS.ImagePanorama( "panoramas/phonghocCNTT.jpg" );
 			phonghocCNTT.addEventListener('progress', function(e){
-
+                $("#loading").show();
 			});
 			phonghocCNTT.addEventListener('load', function(e){
-				//$("#loading").fadeOut();
+				$("#loading").fadeOut();
 			});
 			phonghocCNTT.addEventListener('click', function(e){
 			});
@@ -672,10 +672,10 @@ viewer.add( phonghocCNTT );
 
 var hanhlangCNTT = new PANOLENS.ImagePanorama( "panoramas/hanhlangCNTT.jpg" );
 			hanhlangCNTT.addEventListener('progress', function(e){
-
+                $("#loading").show();
 			});
 			hanhlangCNTT.addEventListener('load', function(e){
-				//$("#loading").fadeOut();
+				$("#loading").fadeOut();
 			});
 			hanhlangCNTT.addEventListener('click', function(e){
 			});
@@ -721,10 +721,10 @@ viewer.add( hanhlangCNTT );
 
 var khonggiansangtaoCNTT = new PANOLENS.ImagePanorama( "panoramas/khonggiansangtaoCNTT.jpg" );
 			khonggiansangtaoCNTT.addEventListener('progress', function(e){
-
+                $("#loading").show();
 			});
 			khonggiansangtaoCNTT.addEventListener('load', function(e){
-				//$("#loading").fadeOut();
+				$("#loading").fadeOut();
 			});
 			khonggiansangtaoCNTT.addEventListener('click', function(e){
 			});
@@ -746,10 +746,10 @@ viewer.add( khonggiansangtaoCNTT );
 
 var sanhchokinhte = new PANOLENS.ImagePanorama( "panoramas/sanhchokinhte.jpg" );
 			sanhchokinhte.addEventListener('progress', function(e){
-
+                $("#loading").show();
 			});
 			sanhchokinhte.addEventListener('load', function(e){
-				//$("#loading").fadeOut();
+				$("#loading").fadeOut();
 			});
 			sanhchokinhte.addEventListener('click', function(e){
 			});
@@ -759,10 +759,10 @@ viewer.add( sanhchokinhte );
 
 var khuvuckituc = new PANOLENS.ImagePanorama( "panoramas/khuvuckituc.jpg" );
 			khuvuckituc.addEventListener('progress', function(e){
-
+                $("#loading").show();
 			});
 			khuvuckituc.addEventListener('load', function(e){
-				//$("#loading").fadeOut();
+				$("#loading").fadeOut();
 			});
 			khuvuckituc.addEventListener('click', function(e){
 			});
@@ -882,14 +882,15 @@ if(viewer.panorama == khuvuckituc){
         currentPanorama = panorama;
         HideInfospots();
         $("#loading").fadeIn();
-        $(".customhotspot").fadeOut();
+        //$(".customhotspot").fadeOut();
+        setTimeout(function () {
             viewer.setPanorama(window[panorama]);
-
+        }, 100);
+        setTimeout(function () {
             $("#" + panorama).fadeIn();
+            $("#loading").fadeOut();
+        }, 1000);
 
-            setTimeout(function (){
-                $('#loading').fadeOut('fast');
-            },1200)
 
 
 
