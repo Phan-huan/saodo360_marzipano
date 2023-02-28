@@ -613,9 +613,10 @@ var viewer = new PANOLENS.Viewer( { container: container , controlBar: true,  ou
     });
 
     /*panoramas*/
-var tongquanngoaixuongX4 = new PANOLENS.ImagePanorama( "panoramas/tongquanngoaixuongX4.jpg" );
+
+var tongquanngoaixuongX4 = new PANOLENS.ImagePanorama( "panoramas/tongquanngoaixuongX4.jpg" );
 			tongquanngoaixuongX4.addEventListener('progress', function(e){
-				$("#loading").show();
+				// $("#loading").show();
 			});
 			tongquanngoaixuongX4.addEventListener('load', function(e){
 				//$("#loading").fadeOut();
@@ -623,17 +624,24 @@ var viewer = new PANOLENS.Viewer( { container: container , controlBar: true,  ou
 			tongquanngoaixuongX4.addEventListener('click', function(e){
 			});
 
-var infospottongquanngoaixuongX40 = new PANOLENS.Infospot( 512, hotspotIcons[5].data, true );
+
+var infospottongquanngoaixuongX40 = new PANOLENS.Infospot( 512, hotspotIcons[5].data, true );
 					infospottongquanngoaixuongX40.position.set( -1182.69, 1664.35, -4553.89 );
 					tongquanngoaixuongX4.add(infospottongquanngoaixuongX40);
-infospottongquanngoaixuongX40.addEventListener('click', function(){
-ChangePanorama('hanhlangCNTT');
-document.getElementById('btnradio30').click()
-});
-viewer.add( tongquanngoaixuongX4 );
-var phonghocCNTT = new PANOLENS.ImagePanorama( "panoramas/phonghocCNTT.jpg" );
+
+infospottongquanngoaixuongX40.addEventListener('click', function(){
+
+ChangePanorama('hanhlangCNTT');
+
+document.getElementById('btnradio30').click()
+
+});
+
+viewer.add( tongquanngoaixuongX4 );
+
+var phonghocCNTT = new PANOLENS.ImagePanorama( "panoramas/phonghocCNTT.jpg" );
 			phonghocCNTT.addEventListener('progress', function(e){
-				$("#loading").show();
+				// $("#loading").show();
 			});
 			phonghocCNTT.addEventListener('load', function(e){
 				//$("#loading").fadeOut();
@@ -641,17 +649,24 @@ var viewer = new PANOLENS.Viewer( { container: container , controlBar: true,  ou
 			phonghocCNTT.addEventListener('click', function(e){
 			});
 
-var infospotphonghocCNTT0 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+var infospotphonghocCNTT0 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotphonghocCNTT0.position.set( -4744.33, -238.64, -1547.48 );
 					phonghocCNTT.add(infospotphonghocCNTT0);
-infospotphonghocCNTT0.addEventListener('click', function(){
-ChangePanorama('hanhlangCNTT');
-document.getElementById('btnradio30').click()
-});
-viewer.add( phonghocCNTT );
-var hanhlangCNTT = new PANOLENS.ImagePanorama( "panoramas/hanhlangCNTT.jpg" );
+
+infospotphonghocCNTT0.addEventListener('click', function(){
+
+ChangePanorama('hanhlangCNTT');
+
+document.getElementById('btnradio30').click()
+
+});
+
+viewer.add( phonghocCNTT );
+
+var hanhlangCNTT = new PANOLENS.ImagePanorama( "panoramas/hanhlangCNTT.jpg" );
 			hanhlangCNTT.addEventListener('progress', function(e){
-				$("#loading").show();
+				// $("#loading").show();
 			});
 			hanhlangCNTT.addEventListener('load', function(e){
 				//$("#loading").fadeOut();
@@ -659,31 +674,48 @@ var viewer = new PANOLENS.Viewer( { container: container , controlBar: true,  ou
 			hanhlangCNTT.addEventListener('click', function(e){
 			});
 
-var infospothanhlangCNTT0 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
+
+var infospothanhlangCNTT0 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
 					infospothanhlangCNTT0.position.set( -4199.93, -2358.31, 1324.06 );
 					hanhlangCNTT.add(infospothanhlangCNTT0);
-infospothanhlangCNTT0.addEventListener('click', function(){
-ChangePanorama('phonghocCNTT');
-document.getElementById('btnradio32').click()
-});
-var infospothanhlangCNTT1 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
+
+infospothanhlangCNTT0.addEventListener('click', function(){
+
+ChangePanorama('phonghocCNTT');
+
+document.getElementById('btnradio32').click()
+
+});
+
+var infospothanhlangCNTT1 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
 					infospothanhlangCNTT1.position.set( -316.00, -1576.94, 4726.97 );
 					hanhlangCNTT.add(infospothanhlangCNTT1);
-infospothanhlangCNTT1.addEventListener('click', function(){
-ChangePanorama('tongquanngoaixuongX4');
-document.getElementById('btnradio29').click()
-});
-var infospothanhlangCNTT2 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
+
+infospothanhlangCNTT1.addEventListener('click', function(){
+
+ChangePanorama('tongquanngoaixuongX4');
+
+document.getElementById('btnradio29').click()
+
+});
+
+var infospothanhlangCNTT2 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
 					infospothanhlangCNTT2.position.set( 409.13, -859.15, -4901.69 );
 					hanhlangCNTT.add(infospothanhlangCNTT2);
-infospothanhlangCNTT2.addEventListener('click', function(){
-ChangePanorama('khonggiansangtaoCNTT');
-document.getElementById('btnradio31').click()
-});
-viewer.add( hanhlangCNTT );
-var khonggiansangtaoCNTT = new PANOLENS.ImagePanorama( "panoramas/khonggiansangtaoCNTT.jpg" );
+
+infospothanhlangCNTT2.addEventListener('click', function(){
+
+ChangePanorama('khonggiansangtaoCNTT');
+
+document.getElementById('btnradio31').click()
+
+});
+
+viewer.add( hanhlangCNTT );
+
+var khonggiansangtaoCNTT = new PANOLENS.ImagePanorama( "panoramas/khonggiansangtaoCNTT.jpg" );
 			khonggiansangtaoCNTT.addEventListener('progress', function(e){
-				$("#loading").show();
+				// $("#loading").show();
 			});
 			khonggiansangtaoCNTT.addEventListener('load', function(e){
 				//$("#loading").fadeOut();
@@ -691,17 +723,24 @@ var viewer = new PANOLENS.Viewer( { container: container , controlBar: true,  ou
 			khonggiansangtaoCNTT.addEventListener('click', function(e){
 			});
 
-var infospotkhonggiansangtaoCNTT0 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
+
+var infospotkhonggiansangtaoCNTT0 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
 					infospotkhonggiansangtaoCNTT0.position.set( -3967.98, -1311.08, -2729.97 );
 					khonggiansangtaoCNTT.add(infospotkhonggiansangtaoCNTT0);
-infospotkhonggiansangtaoCNTT0.addEventListener('click', function(){
-ChangePanorama('hanhlangCNTT');
-document.getElementById('btnradio30').click()
-});
-viewer.add( khonggiansangtaoCNTT );
-var sanhchokinhte = new PANOLENS.ImagePanorama( "panoramas/sanhchokinhte.jpg" );
+
+infospotkhonggiansangtaoCNTT0.addEventListener('click', function(){
+
+ChangePanorama('hanhlangCNTT');
+
+document.getElementById('btnradio30').click()
+
+});
+
+viewer.add( khonggiansangtaoCNTT );
+
+var sanhchokinhte = new PANOLENS.ImagePanorama( "panoramas/sanhchokinhte.jpg" );
 			sanhchokinhte.addEventListener('progress', function(e){
-				$("#loading").show();
+				// $("#loading").show();
 			});
 			sanhchokinhte.addEventListener('load', function(e){
 				//$("#loading").fadeOut();
@@ -709,10 +748,12 @@ var viewer = new PANOLENS.Viewer( { container: container , controlBar: true,  ou
 			sanhchokinhte.addEventListener('click', function(e){
 			});
 
-viewer.add( sanhchokinhte );
-var khuvuckituc = new PANOLENS.ImagePanorama( "panoramas/khuvuckituc.jpg" );
+
+viewer.add( sanhchokinhte );
+
+var khuvuckituc = new PANOLENS.ImagePanorama( "panoramas/khuvuckituc.jpg" );
 			khuvuckituc.addEventListener('progress', function(e){
-				$("#loading").show();
+				// $("#loading").show();
 			});
 			khuvuckituc.addEventListener('load', function(e){
 				//$("#loading").fadeOut();
@@ -720,10 +761,12 @@ var viewer = new PANOLENS.Viewer( { container: container , controlBar: true,  ou
 			khuvuckituc.addEventListener('click', function(e){
 			});
 
-viewer.add( khuvuckituc );
-var sanhchongoaingu = new PANOLENS.ImagePanorama( "panoramas/sanhchongoaingu.jpg" );
+
+viewer.add( khuvuckituc );
+
+var sanhchongoaingu = new PANOLENS.ImagePanorama( "panoramas/sanhchongoaingu.jpg" );
 			sanhchongoaingu.addEventListener('progress', function(e){
-				$("#loading").show();
+				// $("#loading").show();
 			});
 			sanhchongoaingu.addEventListener('load', function(e){
 				//$("#loading").fadeOut();
@@ -731,10 +774,12 @@ var viewer = new PANOLENS.Viewer( { container: container , controlBar: true,  ou
 			sanhchongoaingu.addEventListener('click', function(e){
 			});
 
-viewer.add( sanhchongoaingu );
-var sanhtruocthuvien = new PANOLENS.ImagePanorama( "panoramas/sanhtruocthuvien.jpg" );
+
+viewer.add( sanhchongoaingu );
+
+var sanhtruocthuvien = new PANOLENS.ImagePanorama( "panoramas/sanhtruocthuvien.jpg" );
 			sanhtruocthuvien.addEventListener('progress', function(e){
-				$("#loading").show();
+				// $("#loading").show();
 			});
 			sanhtruocthuvien.addEventListener('load', function(e){
 				//$("#loading").fadeOut();
@@ -742,10 +787,12 @@ var viewer = new PANOLENS.Viewer( { container: container , controlBar: true,  ou
 			sanhtruocthuvien.addEventListener('click', function(e){
 			});
 
-viewer.add( sanhtruocthuvien );
-var phongmaynhaB = new PANOLENS.ImagePanorama( "panoramas/phongmaynhaB.jpg" );
+
+viewer.add( sanhtruocthuvien );
+
+var phongmaynhaB = new PANOLENS.ImagePanorama( "panoramas/phongmaynhaB.jpg" );
 			phongmaynhaB.addEventListener('progress', function(e){
-				$("#loading").show();
+				// $("#loading").show();
 			});
 			phongmaynhaB.addEventListener('load', function(e){
 				//$("#loading").fadeOut();
@@ -753,10 +800,13 @@ var viewer = new PANOLENS.Viewer( { container: container , controlBar: true,  ou
 			phongmaynhaB.addEventListener('click', function(e){
 			});
 
-viewer.add( phongmaynhaB );
-$(document).ready(function(){ ChangePanorama('tongquanngoaixuongX4'); });
 
-/*panoramas-end*/
+viewer.add( phongmaynhaB );
+
+$(document).ready(function(){ ChangePanorama('tongquanngoaixuongX4'); });
+
+
+/*panoramas-end*/
 
 
     function hideTemp() {
@@ -871,10 +921,10 @@ if(viewer.panorama == phongmaynhaB){
     var currentPanorama;
 
     function ChangePanorama(panorama) {
-        $("#loading").fadeIn();
+
         currentPanorama = panorama;
         HideInfospots();
-
+        $("#loading").fadeIn();
         $(".customhotspot").fadeOut();
 
             viewer.setPanorama(window[panorama]);
