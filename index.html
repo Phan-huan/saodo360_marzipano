@@ -702,7 +702,7 @@
         $("#loading").show();
     });
     tongquanngoaixuongX4.addEventListener('load', function (e) {
-        //$("#loading").fadeOut();
+        $("#loading").fadeOut();
     });
     tongquanngoaixuongX4.addEventListener('click', function (e) {
     });
@@ -727,7 +727,7 @@
         $("#loading").show();
     });
     phonghocCNTT.addEventListener('load', function (e) {
-        //$("#loading").fadeOut();
+        $("#loading").fadeOut();
     });
     phonghocCNTT.addEventListener('click', function (e) {
     });
@@ -752,7 +752,7 @@
         $("#loading").show();
     });
     hanhlangCNTT.addEventListener('load', function (e) {
-        //$("#loading").fadeOut();
+        $("#loading").fadeOut();
     });
     hanhlangCNTT.addEventListener('click', function (e) {
     });
@@ -801,7 +801,7 @@
         $("#loading").show();
     });
     khonggiansangtaoCNTT.addEventListener('load', function (e) {
-        //$("#loading").fadeOut();
+        $("#loading").fadeOut();
     });
     khonggiansangtaoCNTT.addEventListener('click', function (e) {
     });
@@ -826,7 +826,7 @@
         $("#loading").show();
     });
     sanhchokinhte.addEventListener('load', function (e) {
-        //$("#loading").fadeOut();
+        $("#loading").fadeOut();
     });
     sanhchokinhte.addEventListener('click', function (e) {
     });
@@ -839,7 +839,7 @@
         $("#loading").show();
     });
     khuvuckituc.addEventListener('load', function (e) {
-        //$("#loading").fadeOut();
+        $("#loading").fadeOut();
     });
     khuvuckituc.addEventListener('click', function (e) {
     });
@@ -852,7 +852,7 @@
         $("#loading").show();
     });
     sanhchongoaingu.addEventListener('load', function (e) {
-        //$("#loading").fadeOut();
+        $("#loading").fadeOut();
     });
     sanhchongoaingu.addEventListener('click', function (e) {
     });
@@ -865,7 +865,7 @@
         $("#loading").show();
     });
     sanhtruocthuvien.addEventListener('load', function (e) {
-        //$("#loading").fadeOut();
+        $("#loading").fadeOut();
     });
     sanhtruocthuvien.addEventListener('click', function (e) {
     });
@@ -996,9 +996,9 @@
 
 
         return {
-            x: vector.x,
-            y: vector.y,
-            z: vector.z,
+            x: 0,
+            y: 0,
+            z: 0,
         };
 
     };
@@ -1006,9 +1006,6 @@
     var currentPanorama;
 
     function ChangePanorama(panorama) {
-        viewer.panorama.rotation.x = 0;
-        viewer.panorama.rotation.y = 0;
-        viewer.panorama.rotation.z = 0;
 
         currentPanorama = panorama;
         HideInfospots();
@@ -1029,15 +1026,6 @@
         $(".customhotspot").fadeOut();
     }
 
-
-    // $(document).click(function(){
-    //     stoprotate=true; setTimeout(function(){  stoprotate=false; }, 1000);
-    // });
-    // viewer.addUpdateCallback(function() {
-    //     if(!stoprotate){
-    //         viewer.panorama.rotation.y -= 0.001;
-    //     }
-    // });
     /*customjs*//*customjs-end*/
 </script>
 
