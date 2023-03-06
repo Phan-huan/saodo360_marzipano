@@ -266,7 +266,15 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body id="body">
-<div></div>
+<!--loading-->
+<div id="loading" class="fullwrapper"
+     style="display: table; width: 100%; height: 100%;background-color:#afafaf;opacity: 1;z-index: 10;">
+    <div style="display: table-cell; vertical-align: middle; text-align: center; color: white; font-size: 30px; padding: 50px;">
+        <img style="height: 300px;" src="images/logoSaodo.png" alt="">
+        <div class="spinner-2"></div>
+    </div>
+</div>
+<!--.-->
 <div class="layout" style="position: absolute;">
     <div class="sidenav">
         <div class="menu">
@@ -706,17 +714,6 @@
     <div style="width: 100%; height: 100%; overflow: hidden; overflow-y: auto; box-sizing: border-box; position: relative;"
          id="tmpcontent"></div>
     <div class="mediaclosebutton" onclick="hideTemp()"><i class="fa fa-times-circle"></i></div>
-</div>
-
-<!--loading-->
-<div id="loading" class="fullwrapper"
-     style="display: table; width: 100%; height: 100%;background-color:#afafaf;opacity: 1;z-index: 10;">
-    <div style="display: table-cell; vertical-align: middle; text-align: center; color: white; font-size: 30px; padding: 50px;">
-        <img style="height: 300px;" src="images/logoSaodo.png" alt="">
-        <div class="spinner-2"></div>
-    </div>
-
-
 </div>
 
 
