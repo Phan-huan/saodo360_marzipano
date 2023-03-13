@@ -1,280 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <!--projecttitle--><title>TRƯỜNG ĐẠI HỌC SAO ĐỎ</title><!--projecttitle-end-->
-    <!--projectdescription-->
-    <meta name="description" content="New 3Sixty Virtual Tour Project"><!--projectdescription-end-->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>TRƯỜNG ĐẠI HỌC SAO ĐỎ</title>
     <meta charset="utf-8">
     <meta name="viewport"
-          content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
+          content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <link rel="stylesheet" href="vendor/reset.min.css">
+    <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
+
+
+    <!--    bootstrap-->
     <!--     Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Insert this line above script imports  -->
+    <!--    font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!--    jquery--><script src="jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-
-    <script>if (typeof module === 'object') {
-        window.module = module;
-        module = undefined;
-    }</script>
-
-    <script src="imagedata.js"></script>
-    <script src="jquery.js"></script>
-    <script src="three.min.js"></script>
-    <script src="panolens.min.js"></script>
-
-    <!-- Insert this line after script imports -->
-    <script>if (window.module) module = window.module;</script>
-
-    <style>
-
-
-        /* SCROLLBAR STYLING */
-        /* width */
-        ::-webkit-scrollbar {
-            width: 0.25em;
-            height: 0.25em;
-        }
-
-        /* Track */
-        ::-webkit-scrollbar-track {
-            background: #2c3643;
-        }
-
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: #0d9e59;
-            transition: background .5s;
-        }
-
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-            background: #00e075;
-        }
-
-
-        html, body {
-            margin: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: #000;
-            position: relative;
-
-        }
-
-        a:link, a:visited {
-            color: #bdc3c7;
-        }
-
-        .fullwrapper {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: black;
-        }
-
-        #container {
-            width: 100%;
-            height: 100%;
-        }
-
-        #tmp {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            padding: 3em;
-            background-color: rgba(0, 0, 0, .5);
-            backdrop-filter: blur(5px);
-            display: none;
-        }
-
-        .rotate {
-            transition: all 0.4s linear;
-        }
-
-        .rotate-180 {
-            transform: rotate(180deg);
-            transition: transform 0.4s;
-        }
-
-        .ul::-webkit-scrollbar-track {
-            background-color: transparent;
-        }
-
-        .ul::-webkit-scrollbar-thumb {
-            background-color: transparent;
-        }
-
-        .panolens-canvas:active {
-            cursor: all-scroll;
-        }
-
-        .owl-carousel {
-            background: transparent;
-            margin-top: 10px;
-        }
-
-        .owl-carousel .item {
-            width: 100%;
-
-
-        }
-
-        .owl-carousel .item :hover {
-            cursor: pointer;
-        }
-
-        .owl-carousel .item img {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
-        .owl-carousel .item .text {
-            text-align: center;
-            position: absolute;
-            background-color: #d90e0e;
-            bottom: -70%;
-            color: white;
-            width: 100%;
-            transition-property: bottom;
-            transition-duration: 0.2s;
-            transition-timing-function: ease-in-out;
-        }
-
-        .owl-carousel .item:hover .text {
-
-            bottom: 0;
-        }
-
-        .tooltip {
-            font-family: Sora, sans-serif;
-            font-weight: 300;
-            line-height: 1.4;
-            font-size: 0.8rem;
-        }
-
-        .bs-tooltip-top .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
-            border-top-color: blue;
-        }
-
-        .bs-tooltip-end .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
-            border-right-color: blue;
-        }
-
-        .bs-tooltip-bottom .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
-            border-bottom-color: blue;
-        }
-
-        .bs-tooltip-start .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
-            border-left-color: blue;
-        }
-
-        .tooltip-inner {
-            color: #fff;
-            border: 1px solid white;
-            background-color: blue;
-        }
-
-        @-webkit-keyframes {
-            from {
-                -webkit-transform: rotate(0deg);
-                -o-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-            to {
-                -webkit-transform: rotate(360deg);
-                -o-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes rotating {
-            from {
-                -ms-transform: rotate(0deg);
-                -moz-transform: rotate(0deg);
-                -webkit-transform: rotate(0deg);
-                -o-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-            to {
-                -ms-transform: rotate(360deg);
-                -moz-transform: rotate(360deg);
-                -webkit-transform: rotate(360deg);
-                -o-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
-        }
-
-        .rotating {
-            -webkit-animation: rotating 1.5s linear infinite;
-            -moz-animation: rotating 1.5s linear infinite;
-            -ms-animation: rotating 1.5s linear infinite;
-            -o-animation: rotating 1.5s linear infinite;
-            animation: rotating 1.5s linear infinite;
-        }
-
-        .preloading {
-            overflow: hidden;
-        }
-
-        .preload-container {
-            width: 100%;
-            height: 100%;
-            background: #ef6e7e;
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            z-index: 99999999999;
-            display: block;
-            padding-right: 17px;
-            overflow-x: hidden;
-            overflow-y: auto;
-        }
-
-        .preload-icon {
-            font-size: 66px;
-            color: #fff;
-            margin-top: 20%;
-        }
-
-
-    </style>
+    <!--    carousel-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
           integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
             integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
 </head>
-<body id="body">
+<body class="multiple-scenes ">
 <!--loading-->
-<div id="loading" class="fullwrapper"
-     style="display: table; width: 100%; height: 100%;background-color:#afafaf;opacity: 1;z-index: 10;">
-    <div style="display: table-cell; vertical-align: middle; text-align: center; color: white; font-size: 30px; padding: 50px;">
-        <img style="height: 300px;" src="images/logoSaodo.png" alt="">
+<div id="loading" class="fullwrapper preloading">
+    <div id="preload" class="preload-container" style="display: table-cell; vertical-align: middle; text-align: center; color: white; font-size: 30px; padding: 50px;">
+        <img style="height: 300px;margin-top: 5%" src="img/logoSaodo.png" alt="">
         <div class="spinner-2"></div>
     </div>
 </div>
-<!--.-->
+
+<div id="pano"></div>
 <div class="layout" style="position: absolute;">
     <div class="sidenav">
         <div class="menu">
@@ -289,246 +59,385 @@
                  id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                 <div class="offcanvas-header"
                      style="height: 130px;display: flex;background-color: #0d6efd;border-top-left-radius: 27px;border-top-right-radius: 27px">
-                    <img src="./images/logoSaodo.png" alt="" style="height: 100%;margin-left: 30px;">
+                    <img src="./img/logoSaodo.png" alt="" style="height: 100%;margin-left: 30px;">
                     <div class="" style="text-align: center;margin-right: 30px;">
                         <p style="font-size: 40px;font-weight: bold;color: #c21111;line-height: 20px;letter-spacing: 10px">
                             SAODO <br><span
                                 style="font-size: 15px;font-weight: bold;letter-spacing: 4px">UNIVERSITY</span></p>
                     </div>
                 </div>
-                <div class="offcanvas-body"
+                <div class="offcanvas-body" id="sceneList"
                      style="border-bottom-right-radius: 30px;border-bottom-left-radius:30px;background: rgba(255,255,255,0.7);overflow: hidden;">
-                    <div class="ul" role="group" aria-label="Basic radio" style="overflow-y: scroll;height: 100%;">
+                    <div class="ul scrollbar scenes" id="style-4" role="group" aria-label="Basic radio"
+                         style="overflow-y: scroll;height: 100%;">
                         <div class="mainMenu">
                             <p class="text_mainMenu">TỔNG QUAN KHUÔN VIÊN CỔNG TRƯỜNG</p>
                         </div>
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
-                        <label onclick="ChangePanorama('congtruong')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio1" data-bs-dismiss="offcanvas"
-                               aria-label="Open">Cổng trường</label>
+                        <a href="javascript:void(0)" class="scene" data-id="0-congtruong">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio1" data-bs-dismiss="offcanvas"
+                                    aria-label="Open">Cổng trường</label>
+                        </a>
+                        <a href="javascript:void(0)" class="scene" data-id="29-vuontruong">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio2" data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Vườn trường</label>
+                        </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                        <label onclick="ChangePanorama('vuontruong')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio2" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Vườn trường</label>
                         <div class="mainMenu">
                             <p class="text_mainMenu">GIẢNG ĐƯỜNG A</p>
                         </div>
+                        <a href="javascript:void(0)" class="scene" data-id="21-sanhnhaa">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio3" data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Sảnh nhà A</label> </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                        <label onclick="ChangePanorama('sanhnhaA')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio3" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Sảnh nhà A</label>
+                        <a href="javascript:void(0)" class="scene" data-id="3-honnonbo">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio4" data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Hòn Non Bộ </label> </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-                        <label onclick="ChangePanorama('honnonbo')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio4" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Hòn Non Bộ </label>
+                        <a href="javascript:void(0)" class="scene" data-id="9-phonghoithao">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio5" data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Phòng hội thảo</label> </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
-                        <label onclick="ChangePanorama('phonghoithao')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio5" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Phòng hội thảo</label>
+                        <a href="javascript:void(0)" class="scene" data-id="7-phongdaotao">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio6" data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Phòng đào tạo</label> </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
-                        <label onclick="ChangePanorama('phongdaotao')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio6" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Phòng đào tạo</label>
+                        <a href="javascript:void(0)" class="scene" data-id="15-phongtuyensinh">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio7" data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Phòng tuyển sinh</label> </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off">
-                        <label onclick="ChangePanorama('phongtuyensinh')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio7" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Phòng tuyển sinh</label>
+                        <a href="javascript:void(0)" class="scene" data-id="12-phongquantri">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio8" data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Phòng quản trị </label> </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off">
-                        <label onclick="ChangePanorama('phongquantri')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio8" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Phòng quản trị </label>
 
                         <div class="mainMenu">
                             <p class="text_mainMenu">THƯ VIỆN</p>
                         </div>
+                        <a href="javascript:void(0)" class="scene" data-id="24-sanhtruocthuvien">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio34" autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio34" data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Sảnh trước</label> </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio34" autocomplete="off">
-                        <label onclick="ChangePanorama('sanhtruocthuvien')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio34" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Sảnh trước</label>
+                        <a href="javascript:void(0)" class="scene" data-id="28-trungtamthuvien">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio35" autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio35" data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Trung tâm thư viện</label> </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio35" autocomplete="off">
-                        <label onclick="ChangePanorama('trungtamthuvien')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio35" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Trung tâm thư viện</label>
                         <div class="mainMenu">
                             <p class="text_mainMenu">NHÀ B</p>
                         </div>
+                        <a href="javascript:void(0)" class="scene" data-id="22-sanhtruocb">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio9" data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Sảnh trước</label>
+                        </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off">
-                        <label onclick="ChangePanorama('sanhtruocB')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio9" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Sảnh trước</label>
+                        <a href="javascript:void(0)" class="scene" data-id="18-sanhchinhb">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio10" autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio10" data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Sảnh chính</label>
+                        </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio10" autocomplete="off">
-                        <label onclick="ChangePanorama('sanhchinhB')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio10" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Sảnh chính</label>
+                        <a href="javascript:void(0)" class="scene" data-id="13-phongtochuchanhchinh">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio11" autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio11" data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Phòng tổ chức - hành chính</label>
+                        </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio11" autocomplete="off">
-                        <label onclick="ChangePanorama('phongtochuchanhchinh')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio11" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Phòng tổ chức - hành chính</label>
+                        <a href="javascript:void(0)" class="scene" data-id="10-phonghopb">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio12"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio12"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Phòng Họp</label>
+                        </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio12" autocomplete="off">
-                        <label onclick="ChangePanorama('phonghopB')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio12" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Phòng Họp</label>
+                        <a href="javascript:void(0)" class="scene" data-id="19-sanhchokinhte">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio13"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio13"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Sảnh chờ(khoa kinh tế)</label>
+                        </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio13" autocomplete="off">
-                        <label onclick="ChangePanorama('sanhchokinhte')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio13" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Sảnh chờ(khoa kinh tế)</label>
+                        <a href="javascript:void(0)" class="scene" data-id="20-sanhchongoaingu">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio14"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio14"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Sảnh chờ(khoa du lịch & ngoại
+                                ngữ)</label>
+                        </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio14" autocomplete="off">
-                        <label onclick="ChangePanorama('sanhchongoaingu')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio14" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Sảnh chờ(khoa du lịch & ngoại
-                            ngữ)</label>
+                        <a href="javascript:void(0)" class="scene" data-id="14-phongtruyenthong">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio15"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio15"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Phòng truyền thống</label>
+                        </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio15" autocomplete="off">
-                        <label onclick="ChangePanorama('phongtruyenthong')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio15" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Phòng truyền thống</label>
+                        <a href="javascript:void(0)" class="scene" data-id="25-sanhtruyenthong">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio16"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio16"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Sảnh truyền thống</label>
+                        </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio16" autocomplete="off">
-                        <label onclick="ChangePanorama('sanhtruyenthong')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio16" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Sảnh truyền thống</label>
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio33" autocomplete="off">
-                        <label onclick="ChangePanorama('phongmaynhaB')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio33" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Phòng máy</label>
+                        <a href="javascript:void(0)" class="scene" data-id="11-phongmaynhab-">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio33"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio33"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Phòng máy</label>
+                        </a>
+
 
                         <div class="mainMenu">
                             <p class="text_mainMenu">HỘI TRƯỜNG</p>
                         </div>
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio17" autocomplete="off">
-                        <label onclick="ChangePanorama('sanhtruochoitruong_daiphunnuoc')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio17" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Sảnh trước & đài phun
-                            nước</label>
+                        <a href="javascript:void(0)" class="scene" data-id="23-sanhtruochoitruong_daiphunnuoc">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio17"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio17"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Sảnh trước & đài phun
+                                nước</label>
+                        </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio18" autocomplete="off">
-                        <label onclick="ChangePanorama('trungtamhoitruong')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio18" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Trung tâm hội trường</label>
+                        <a href="javascript:void(0)" class="scene" data-id="27-trungtamhoitruong">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio18"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio18"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Trung tâm hội trường</label>
+                        </a>
+
 
                         <div class="mainMenu">
                             <p class="text_mainMenu">KHU TIỆN ÍCH</p>
                         </div>
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio19" autocomplete="off">
-                        <label onclick="ChangePanorama('nhadanang')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio19" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Nhà đa năng</label>
+                        <a href="javascript:void(0)" class="scene" data-id="6-nhadanang">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio19"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio19"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Nhà đa năng</label>
+                        </a>
+                        <a href="javascript:void(0)" class="scene" data-id="30-sanbongda">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio36"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio36"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Sân bóng đá</label>
+                        </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio20" autocomplete="off">
-                        <label onclick="ChangePanorama('cangtin')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio20" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Căng tin</label>
+                        <a href="javascript:void(0)" class="scene" data-id="16-sanbongchuyenngoaitroi">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio37"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio37"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Sân bóng chuyền</label>
+                        </a>
 
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio21" autocomplete="off">
-                        <label onclick="ChangePanorama('khuvuckituc')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio21" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Khu kí túc xá</label>
+                        <a href="javascript:void(0)" class="scene" data-id="17-sanbongrongoaitroi">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio38"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio38"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Sân bóng rổ</label>
+                        </a>
+                        <a href="javascript:void(0)" class="scene" data-id="26-santhethao_theducdungcungoaitroi">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio39"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio39"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Sân TDTT ngoài trời</label>
+                        </a>
+                        <a href="javascript:void(0)" class="scene" data-id="1-cangtin">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio20"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio20"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Căng tin
+                            </label>
+                        </a>
+                        <a href="javascript:void(0)" class="scene" data-id="5-khuvuckituc">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio21"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio21"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Khu kí túc xá</label>
+                        </a>
+
 
                         <div class="mainMenu">
                             <p class="text_mainMenu">XƯỞNG KHOA ĐIỆN</p>
                         </div>
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio23" autocomplete="off">
-                        <label onclick="ChangePanorama('sanhnhaA')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio23" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Khoa điện</label>
+                        <a href="javascript:void(0)" class="scene" data-id="2-hanhlangcntt">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio23"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio23"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Khoa điện</label>
+                        </a>
+
                         <div class="mainMenu">
                             <p class="text_mainMenu">XƯỞNG KHOA Ô TÔ</p>
                         </div>
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio24" autocomplete="off">
-                        <label onclick="ChangePanorama('sanhnhaA')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio24" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Khoa ô tô</label>
+                        <a href="javascript:void(0)" class="scene" data-id="2-hanhlangcntt">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio24"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio24"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Khoa ô tô</label>
+                        </a>
+
                         <div class="mainMenu">
                             <p class="text_mainMenu">XƯỞNG KHOA MAY & THỜI TRANG</p>
                         </div>
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio27" autocomplete="off">
-                        <label onclick="ChangePanorama('sanhnhaA')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio27">Khoa may và thời trang</label>
+                        <a href="javascript:void(0)" class="scene" data-id="2-hanhlangcntt">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio27"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio27">Khoa may và thời
+                                trang</label>
+                        </a>
+
                         <div class="mainMenu">
                             <p class="text_mainMenu">XƯỞNG KHOA THỰC PHẨM & HÓA HỌC</p>
                         </div>
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio28" autocomplete="off">
-                        <label onclick="ChangePanorama('sanhnhaA')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio28" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Khoa thực phẩm và hóa
-                            học</label>
+                        <a href="javascript:void(0)" class="scene" data-id="2-hanhlangcntt">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio28"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio28"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Khoa thực phẩm và hóa
+                                học</label>
+                        </a>
+
                         <div class="mainMenu">
                             <p class="text_mainMenu">XƯỞNG KHOA CƠ KHÍ</p>
                         </div>
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio25" autocomplete="off">
-                        <label onclick="ChangePanorama('sanhnhaA')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio25" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Khoa cơ Khí</label>
+                        <a href="javascript:void(0)" class="scene" data-id="2-hanhlangcntt">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio25"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio25"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Khoa cơ Khí</label>
+                        </a>
+
                         <div class="mainMenu">
                             <p class="text_mainMenu">XƯỞNG KHOA CÔNG NGHỆ THÔNG TIN</p>
                         </div>
-                        <input type="radio" class="btn-check"
-                               name="btnradio" id="btnradio29" autocomplete="off" checked>
-                        <label onclick="ChangePanorama('tongquanngoaixuongX4')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio29" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Tổng quan bên ngoài</label>
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio30" autocomplete="off">
-                        <label onclick="ChangePanorama('hanhlangCNTT')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio30" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Hành lang</label>
-                        <input type="radio" class="btn-check"
-                               name="btnradio" id="btnradio31" autocomplete="off">
-                        <label onclick="ChangePanorama('khonggiansangtaoCNTT')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio31" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Không gian sáng tạo</label>
-                        <input type="radio" class="btn-check" name="btnradio"
-                               id="btnradio32" autocomplete="off">
-                        <label onclick="ChangePanorama('phonghocCNTT')"
-                               style="width: 100%;text-align: left;border: none;border-radius: 0"
-                               class="btn btn-outline-danger listLInk" for="btnradio32" data-bs-dismiss="offcanvas"
-                               aria-label="Close">Phòng học</label>
+
+
+                        <a href="javascript:void(0)" class="scene" data-id="2-hanhlangcntt">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio30"
+                                   autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio30"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Hành lang</label>
+                        </a>
+
+
+                        <a href="javascript:void(0)" class="scene" data-id="4-khonggiansangtaocntt">
+                            <input type="radio" class="btn-check"
+                                   name="btnradio" id="btnradio31" autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio31"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Không gian sáng tạo</label>
+                        </a>
+
+                        <a href="javascript:void(0)" class="scene" data-id="8-phonghoccntt">
+                            <input type="radio" class="btn-check" name="btnradio"
+                                   id="btnradio32" autocomplete="off">
+                            <label
+                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
+                                    class="btn btn-outline-danger listLInk" for="btnradio32"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close">Phòng học</label>
+                        </a>
+
+
                     </div>
                 </div>
             </div>
@@ -552,102 +461,102 @@
                  aria-labelledby="offcanvasScrollingLabel">
                 <div class="owl-carousel">
                     <div class="item"
-                         onclick="ChangePanorama('tongquanngoaixuongX4');document.getElementById('btnradio29').click()">
-                        <img src="panoramas_small/tongquanngoaixuongX4.jpg"
+                         onclick="document.getElementById('btnradio29').click()">
+                        <img src="listImage_small/tongquanngoaixuongX4.jpg"
                              alt="image" loading="lazy"/>
                         <div class="text">
                             Tổng quan bên ngoài xưởng X4
                         </div>
                     </div>
                     <div class="item"
-                         onclick="ChangePanorama('hanhlangCNTT');document.getElementById('btnradio30').click()">
-                        <img src="panoramas_small/hanhlangCNTT.jpg"
+                         onclick="document.getElementById('btnradio30').click()">
+                        <img src="listImage_small/hanhlangCNTT.jpg"
                              alt="image" loading="lazy"/>
                         <div class="text">
                             Hành lang CNTT
                         </div>
                     </div>
                     <div class="item"
-                         onclick="ChangePanorama('khonggiansangtaoCNTT');document.getElementById('btnradio31').click()">
-                        <img src="panoramas_small/khonggiansangtaoCNTT.jpg"
+                         onclick="document.getElementById('btnradio31').click()">
+                        <img src="listImage_small/khonggiansangtaoCNTT.jpg"
                              alt="image" loading="lazy"/>
                         <div class="text">
                             Không gian sáng tạo CNTT
                         </div>
                     </div>
                     <div class="item"
-                         onclick="ChangePanorama('phonghocCNTT');document.getElementById('btnradio32').click()">
-                        <img src="panoramas_small/phonghocCNTT.jpg"
+                         onclick="document.getElementById('btnradio32').click()">
+                        <img src="listImage_small/phonghocCNTT.jpg"
                              alt="image" loading="lazy"/>
                         <div class="text">
                             Phòng học CNTT
                         </div>
                     </div>
                     <div class="item">
-                        <img src="panoramas_small/khuvuckituc.jpg"
+                        <img src="listImage_small/khuvuckituc.jpg"
                              alt="image" loading="lazy"/>
                         <div class="text">
 
                         </div>
                     </div>
                     <div class="item">
-                        <img src="panoramas_small/sanhchokinhte.jpg"
+                        <img src="listImage_small/sanhchokinhte.jpg"
                              alt="image" loading="lazy"/>
                         <div class="text">
 
                         </div>
                     </div>
                     <div class="item">
-                        <img src="panoramas_small/khuvuckituc.jpg"
+                        <img src="listImage_small/khuvuckituc.jpg"
                              alt="image" loading="lazy"/>
                         <div class="text">
 
                         </div>
                     </div>
                     <div class="item">
-                        <img src="panoramas_small/sanhchokinhte.jpg"
+                        <img src="listImage_small/sanhchokinhte.jpg"
                              alt="image" loading="lazy"/>
                         <div class="text">
 
                         </div>
                     </div>
                     <div class="item">
-                        <img src="panoramas_small/khuvuckituc.jpg"
+                        <img src="listImage_small/khuvuckituc.jpg"
                              alt="image" loading="lazy"/>
                         <div class="text">
 
                         </div>
                     </div>
                     <div class="item">
-                        <img src="panoramas_small/sanhchokinhte.jpg"
+                        <img src="listImage_small/sanhchokinhte.jpg"
                              alt="image" loading="lazy"/>
                         <div class="text">
 
                         </div>
                     </div>
                     <div class="item">
-                        <img src="panoramas_small/khuvuckituc.jpg"
+                        <img src="listImage_small/khuvuckituc.jpg"
                              alt="image" loading="lazy"/>
                         <div class="text">
 
                         </div>
                     </div>
                     <div class="item">
-                        <img src="panoramas_small/sanhchokinhte.jpg"
+                        <img src="listImage_small/sanhchokinhte.jpg"
                              alt="image" loading="lazy"/>
                         <div class="text">
 
                         </div>
                     </div>
                     <div class="item">
-                        <img src="panoramas_small/khuvuckituc.jpg"
+                        <img src="listImage_small/khuvuckituc.jpg"
                              alt="image" loading="lazy"/>
                         <div class="text">
 
                         </div>
                     </div>
                     <div class="item">
-                        <img src="panoramas_small/sanhchokinhte.jpg"
+                        <img src="listImage_small/sanhchokinhte.jpg"
                              alt="image" loading="lazy"/>
                         <div class="text">
 
@@ -661,7 +570,7 @@
     </div>
     <div class="menu-bottom" style="width: 100vw;height: 43px;background: rgba(255,0,0,0.7);position: fixed;bottom: 0;">
         <div class="content" style="margin-top: 2px;display: flex;justify-content: center">
-            <button style="margin-left: 20px;border: 1px solid white" data-bs-placement="top"
+            <button style="height: 37px; width: 40px;margin-left: 20px;border: 1px solid white" data-bs-placement="top"
                     class="btn btn-primary tooltipa"
                     type="button"
                     data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling1"
@@ -669,722 +578,85 @@
                 <i class="fa-solid fa-location-dot"></i>
                 <span class="tooltiptext">Vị trí</span>
             </button>
-            <button style="margin-left: 20px; border:1px solid white" data-bs-placement="top"
+            <button style="height: 37px; width: 40px;margin-left: 20px; border:1px solid white" data-bs-placement="top"
                     class="btn btn-primary tooltipa" type="button"
                     data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling2"
                     aria-controls="offcanvasScrolling1">
                 <i class="fa-solid fa-table-cells-large"></i>
                 <span class="tooltiptext">Danh sách ảnh</span>
             </button>
+
+            <a type="button" href="javascript:void(0)" id="autorotateToggle">
+                <button style="height: 37px; width: 40px;margin-left: 20px;border:1px solid white" data-bs-placement="top"
+                        class="btn btn-primary tooltipa icon off" type="button">
+                    <i class="fa-solid fa-play"></i>
+                    <span class="tooltiptext">Quay</span>
+                </button>
+
+                <button style="height: 37px; width: 40px;margin-left: 20px; border:1px solid white"
+                        data-bs-placement="top"
+                        class="btn btn-primary tooltipa icon on" type="button">
+                    <i class="fa-solid fa-pause "></i>
+                    <span class="tooltiptext">Dừng quay</span>
+                </button>
+            </a>
+
+            <a type="button" href="javascript:void(0)" id="fullscreenToggle">
+                <button style="height: 37px; width: 40px;margin-left: 20px;border:1px solid white" data-bs-placement="top"
+                        class="btn btn-primary tooltipa icon off" type="button">
+                    <i class="fa-solid fa-expand"></i>
+                    <span class="tooltiptext">Toàn màn hình</span>
+                </button>
+
+                <button style="height: 37px; width: 40px;margin-left: 20px; border:1px solid white"
+                        data-bs-placement="top"
+                        class="btn btn-primary tooltipa icon on" type="button">
+                    <i class="fa-solid fa-compress"></i>
+                    <span class="tooltiptext">Thu màn hình</span>
+                </button>
+            </a>
+
+
         </div>
     </div>
 </div>
 
 
-<!--customhtml-->
-<div class='customhotspot' id='tongquanngoaixuongX4'></div>
-<div class='customhotspot' id='phonghocCNTT'></div>
-<div class='customhotspot' id='hanhlangCNTT'></div>
-<div class='customhotspot' id='khonggiansangtaoCNTT'></div>
-<div class='customhotspot' id='sanhchokinhte'></div>
-<div class='customhotspot' id='khuvuckituc'></div>
-<div class='customhotspot' id='sanhchongoaingu'></div>
-<div class='customhotspot' id='sanhtruocthuvien'></div>
-<div class='customhotspot' id='phongmaynhaB'></div>
-<div class='customhotspot' id='vuontruong'></div>
-<div class='customhotspot' id='sanhnhaA'></div>
-<div class='customhotspot' id='honnonbo'></div>
-<div class='customhotspot' id='phonghoithao'></div>
-<div class='customhotspot' id='phongdaotao'></div>
-<div class='customhotspot' id='phongtuyensinh'></div>
-<div class='customhotspot' id='phongquantri'></div>
-<div class='customhotspot' id='trungtamthuvien'></div>
-<div class='customhotspot' id='sanhtruocB'></div>
-<div class='customhotspot' id='sanhchinhB'></div>
-<div class='customhotspot' id='phongtochuchanhchinh'></div>
-<div class='customhotspot' id='phonghopB'></div>
-<div class='customhotspot' id='phongtruyenthong'></div>
-<div class='customhotspot' id='sanhtruyenthong'></div>
-<div class='customhotspot' id='sanhtruochoitruong_daiphunnuoc'></div>
-<div class='customhotspot' id='trungtamhoitruong'></div>
-<div class='customhotspot' id='nhadanang'></div>
-<div class='customhotspot' id='cangtin'></div>
-<div class='customhotspot' id='congtruong'></div><!--customhtml-end-->
-<div id="tmp" style="position: absolute;">
-    <div style="width: 100%; height: 100%; overflow: hidden; overflow-y: auto; box-sizing: border-box; position: relative;"
-         id="tmpcontent"></div>
-    <div class="mediaclosebutton" onclick="hideTemp()"><i class="fa fa-times-circle"></i></div>
+<div id="titleBar">
+    <h1 class="sceneName"></h1>
 </div>
 
 
-<script>
-    $("#sidebarCollapse").click(function () {
-        $("#iconSideNav").toggleClass("rotate-180");
-    })
-</script>
-
-<script>
-    var container = document.querySelector('#container');
-    /*panolens*/
-
-    var viewer = new PANOLENS.Viewer({
-        container: container,
-        controlBar: true,
-        output: 'console',
-        autoHideInfospot: false,
-        autoRotate: true,
-        autoRotateSpeed: 0.4,
-        autoRotateActivationDuration: 1200,
-        cameraFov: 50,
-        initialLookAt: new THREE.Vector3(20, 2, 0),
-    });
-    $("#sidebarCollapse").click(function () {
-
-    })
-
-
-    /*panolens-end*/
-
-    viewer.addUpdateCallback(function () {
-    });
-
-    /*panoramas*/
-
-    var tongquanngoaixuongX4 = new PANOLENS.ImagePanorama("panoramas/tongquanngoaixuongX4.jpg");
-    tongquanngoaixuongX4.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    tongquanngoaixuongX4.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    tongquanngoaixuongX4.addEventListener('click', function (e) {
-    });
-
-
-    var infospottongquanngoaixuongX40 = new PANOLENS.Infospot(512, hotspotIcons[5].data, true);
-    infospottongquanngoaixuongX40.position.set(-1182.69, 1664.35, -4553.89);
-    tongquanngoaixuongX4.add(infospottongquanngoaixuongX40);
-
-    infospottongquanngoaixuongX40.addEventListener('click', function () {
-
-        ChangePanorama('hanhlangCNTT');
-
-        document.getElementById('btnradio30').click()
-
-    });
-
-    viewer.add(tongquanngoaixuongX4);
-
-    var phonghocCNTT = new PANOLENS.ImagePanorama("panoramas/phonghocCNTT.jpg");
-    phonghocCNTT.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    phonghocCNTT.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    phonghocCNTT.addEventListener('click', function (e) {
-    });
-
-
-    var infospotphonghocCNTT0 = new PANOLENS.Infospot(512, hotspotIcons[11].data, true);
-    infospotphonghocCNTT0.position.set(-4744.33, -238.64, -1547.48);
-    phonghocCNTT.add(infospotphonghocCNTT0);
-
-    infospotphonghocCNTT0.addEventListener('click', function () {
-
-        ChangePanorama('hanhlangCNTT');
-
-        document.getElementById('btnradio30').click()
-
-    });
-
-    viewer.add(phonghocCNTT);
-
-    var hanhlangCNTT = new PANOLENS.ImagePanorama("panoramas/hanhlangCNTT.jpg");
-    hanhlangCNTT.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    hanhlangCNTT.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    hanhlangCNTT.addEventListener('click', function (e) {
-    });
-
-
-    var infospothanhlangCNTT0 = new PANOLENS.Infospot(512, hotspotIcons[6].data, true);
-    infospothanhlangCNTT0.position.set(-4199.93, -2358.31, 1324.06);
-    hanhlangCNTT.add(infospothanhlangCNTT0);
-
-    infospothanhlangCNTT0.addEventListener('click', function () {
-
-        ChangePanorama('phonghocCNTT');
-
-        document.getElementById('btnradio32').click()
-
-    });
-
-    var infospothanhlangCNTT1 = new PANOLENS.Infospot(512, hotspotIcons[6].data, true);
-    infospothanhlangCNTT1.position.set(-316.00, -1576.94, 4726.97);
-    hanhlangCNTT.add(infospothanhlangCNTT1);
-
-    infospothanhlangCNTT1.addEventListener('click', function () {
-
-        ChangePanorama('tongquanngoaixuongX4');
-
-        document.getElementById('btnradio29').click()
-
-    });
-
-    var infospothanhlangCNTT2 = new PANOLENS.Infospot(512, hotspotIcons[6].data, true);
-    infospothanhlangCNTT2.position.set(409.13, -859.15, -4901.69);
-    hanhlangCNTT.add(infospothanhlangCNTT2);
-
-    infospothanhlangCNTT2.addEventListener('click', function () {
-
-        ChangePanorama('khonggiansangtaoCNTT');
-
-        document.getElementById('btnradio31').click()
-
-    });
-
-    viewer.add(hanhlangCNTT);
-
-    var khonggiansangtaoCNTT = new PANOLENS.ImagePanorama("panoramas/khonggiansangtaoCNTT.jpg");
-    khonggiansangtaoCNTT.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    khonggiansangtaoCNTT.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    khonggiansangtaoCNTT.addEventListener('click', function (e) {
-    });
-
-
-    var infospotkhonggiansangtaoCNTT0 = new PANOLENS.Infospot(512, hotspotIcons[6].data, true);
-    infospotkhonggiansangtaoCNTT0.position.set(-3967.98, -1311.08, -2729.97);
-    khonggiansangtaoCNTT.add(infospotkhonggiansangtaoCNTT0);
-
-    infospotkhonggiansangtaoCNTT0.addEventListener('click', function () {
-
-        ChangePanorama('hanhlangCNTT');
-
-        document.getElementById('btnradio30').click()
-
-    });
-
-    viewer.add(khonggiansangtaoCNTT);
-
-    var sanhchokinhte = new PANOLENS.ImagePanorama("panoramas/sanhchokinhte.jpg");
-    sanhchokinhte.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    sanhchokinhte.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    sanhchokinhte.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(sanhchokinhte);
-
-    var khuvuckituc = new PANOLENS.ImagePanorama("panoramas/khuvuckituc.jpg");
-    khuvuckituc.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    khuvuckituc.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    khuvuckituc.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(khuvuckituc);
-
-    var sanhchongoaingu = new PANOLENS.ImagePanorama("panoramas/sanhchongoaingu.jpg");
-    sanhchongoaingu.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    sanhchongoaingu.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    sanhchongoaingu.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(sanhchongoaingu);
-
-    var sanhtruocthuvien = new PANOLENS.ImagePanorama("panoramas/sanhtruocthuvien.jpg");
-    sanhtruocthuvien.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    sanhtruocthuvien.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    sanhtruocthuvien.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(sanhtruocthuvien);
-
-    var phongmaynhaB = new PANOLENS.ImagePanorama("panoramas/phongmaynhaB.jpg");
-    phongmaynhaB.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    phongmaynhaB.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    phongmaynhaB.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(phongmaynhaB);
-
-    var vuontruong = new PANOLENS.ImagePanorama("panoramas/vuontruong.jpg");
-    vuontruong.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    vuontruong.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    vuontruong.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(vuontruong);
-
-    var sanhnhaA = new PANOLENS.ImagePanorama("panoramas/sanhnhaA.jpg");
-    sanhnhaA.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    sanhnhaA.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    sanhnhaA.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(sanhnhaA);
-
-    var honnonbo = new PANOLENS.ImagePanorama("panoramas/honnonbo.jpg");
-    honnonbo.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    honnonbo.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    honnonbo.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(honnonbo);
-
-    var phonghoithao = new PANOLENS.ImagePanorama("panoramas/phonghoithao.jpg");
-    phonghoithao.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    phonghoithao.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    phonghoithao.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(phonghoithao);
-
-    var phongdaotao = new PANOLENS.ImagePanorama("panoramas/phongdaotao.jpg");
-    phongdaotao.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    phongdaotao.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    phongdaotao.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(phongdaotao);
-
-    var phongtuyensinh = new PANOLENS.ImagePanorama("panoramas/phongtuyensinh.jpg");
-    phongtuyensinh.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    phongtuyensinh.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    phongtuyensinh.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(phongtuyensinh);
-
-    var phongquantri = new PANOLENS.ImagePanorama("panoramas/phongquantri.jpg");
-    phongquantri.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    phongquantri.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    phongquantri.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(phongquantri);
-
-    var trungtamthuvien = new PANOLENS.ImagePanorama("panoramas/trungtamthuvien.jpg");
-    trungtamthuvien.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    trungtamthuvien.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    trungtamthuvien.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(trungtamthuvien);
-
-    var sanhtruocB = new PANOLENS.ImagePanorama("panoramas/sanhtruocB.jpg");
-    sanhtruocB.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    sanhtruocB.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    sanhtruocB.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(sanhtruocB);
-
-    var sanhchinhB = new PANOLENS.ImagePanorama("panoramas/sanhchinhB.jpg");
-    sanhchinhB.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    sanhchinhB.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    sanhchinhB.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(sanhchinhB);
-
-    var phongtochuchanhchinh = new PANOLENS.ImagePanorama("panoramas/phongtochuchanhchinh.jpg");
-    phongtochuchanhchinh.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    phongtochuchanhchinh.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    phongtochuchanhchinh.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(phongtochuchanhchinh);
-
-    var phonghopB = new PANOLENS.ImagePanorama("panoramas/phonghopB.jpg");
-    phonghopB.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    phonghopB.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    phonghopB.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(phonghopB);
-
-    var phongtruyenthong = new PANOLENS.ImagePanorama("panoramas/phongtruyenthong.jpg");
-    phongtruyenthong.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    phongtruyenthong.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    phongtruyenthong.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(phongtruyenthong);
-
-    var sanhtruyenthong = new PANOLENS.ImagePanorama("panoramas/sanhtruyenthong.jpg");
-    sanhtruyenthong.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    sanhtruyenthong.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    sanhtruyenthong.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(sanhtruyenthong);
-
-    var sanhtruochoitruong_daiphunnuoc = new PANOLENS.ImagePanorama("panoramas/sanhtruochoitruong_daiphunnuoc.jpg");
-    sanhtruochoitruong_daiphunnuoc.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    sanhtruochoitruong_daiphunnuoc.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    sanhtruochoitruong_daiphunnuoc.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(sanhtruochoitruong_daiphunnuoc);
-
-    var trungtamhoitruong = new PANOLENS.ImagePanorama("panoramas/trungtamhoitruong.jpg");
-    trungtamhoitruong.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    trungtamhoitruong.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    trungtamhoitruong.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(trungtamhoitruong);
-
-    var nhadanang = new PANOLENS.ImagePanorama("panoramas/nhadanang.jpg");
-    nhadanang.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    nhadanang.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    nhadanang.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(nhadanang);
-
-    var cangtin = new PANOLENS.ImagePanorama("panoramas/cangtin.jpg");
-    cangtin.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    cangtin.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    cangtin.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(cangtin);
-
-    var congtruong = new PANOLENS.ImagePanorama("panoramas/congtruong.jpg");
-    congtruong.addEventListener('progress', function (e) {
-        $("#loading").show();
-    });
-    congtruong.addEventListener('load', function (e) {
-        $("#loading").fadeOut();
-    });
-    congtruong.addEventListener('click', function (e) {
-    });
-
-
-    viewer.add(congtruong);
-
-    $(document).ready(function () {
-        ChangePanorama('tongquanngoaixuongX4');
-    });
-
-
-    /*panoramas-end*/
-
-
-    function hideTemp() {
-        $("#tmp").fadeOut();
-        setTimeout(function () {
-            $("#tmpcontent").html("");
-        }, 1000);
-    }
-
-    function showMedia(type, content) {
-        switch (type) {
-            case 1 :
-                //Image
-                $("#tmpcontent").html("<img src='" + content + "' style='width: 100%;'>");
-                $("#tmp").fadeIn();
-                break;
-            case 2 :
-                //Video
-                $("#tmpcontent").html("<video id='webvideo' controls autoplay style='width: 100%; height: 100%;'><source src='" + content + "' type='video/mp4'> Your browser does not support the video tag. </video>");
-                $("#tmp").fadeIn();
-                break;
-            case 3 :
-                //Audio
-                $("#tmpcontent").html("<audio controls style='width: 100%;'><source src='" + content + "' type='audio/ogg'>Your browser does not support the audio tag.</audio>");
-                $("#tmp").fadeIn();
-                break;
-            case 4 :
-                //PDF
-                $("#tmpcontent").html("<iframe src='pdfjs/web/viewer.html?file=../../" + content + "' style='width: 100%; height: 99%;'></iframe>");
-                $("#tmp").fadeIn();
-                break;
-        }
-    }
-
-
-    //Update Callback
-    viewer.addUpdateCallback(function () {
-
-        /*viewerupdatecallback*/
-        if (viewer.panorama == tongquanngoaixuongX4) {
-        }
-
-        if (viewer.panorama == phonghocCNTT) {
-        }
-
-        if (viewer.panorama == hanhlangCNTT) {
-        }
-
-        if (viewer.panorama == khonggiansangtaoCNTT) {
-        }
-
-        if (viewer.panorama == sanhchokinhte) {
-        }
-
-        if (viewer.panorama == khuvuckituc) {
-        }
-
-        if (viewer.panorama == sanhchongoaingu) {
-        }
-
-        if (viewer.panorama == sanhtruocthuvien) {
-        }
-
-        if (viewer.panorama == phongmaynhaB) {
-        }
-
-        if (viewer.panorama == vuontruong) {
-        }
-
-        if (viewer.panorama == sanhnhaA) {
-        }
-
-        if (viewer.panorama == honnonbo) {
-        }
-
-        if (viewer.panorama == phonghoithao) {
-        }
-
-        if (viewer.panorama == phongdaotao) {
-        }
-
-        if (viewer.panorama == phongtuyensinh) {
-        }
-
-        if (viewer.panorama == phongquantri) {
-        }
-
-        if (viewer.panorama == trungtamthuvien) {
-        }
-
-        if (viewer.panorama == sanhtruocB) {
-        }
-
-        if (viewer.panorama == sanhchinhB) {
-        }
-
-        if (viewer.panorama == phongtochuchanhchinh) {
-        }
-
-        if (viewer.panorama == phonghopB) {
-        }
-
-        if (viewer.panorama == phongtruyenthong) {
-        }
-
-        if (viewer.panorama == sanhtruyenthong) {
-        }
-
-        if (viewer.panorama == sanhtruochoitruong_daiphunnuoc) {
-        }
-
-        if (viewer.panorama == trungtamhoitruong) {
-        }
-
-        if (viewer.panorama == nhadanang) {
-        }
-
-        if (viewer.panorama == cangtin) {
-        }
-
-        if (viewer.panorama == congtruong) {
-        }
-        /*viewerupdatecallback-end*/
-
-
-    });
-
-
-    var hotspotsvisible = true;
-
-    function ShowMyInfospot(hs, elid) {
-        var thehs = toScreenPosition(hs);
-        if (thehs.z < 1) {
-            $("#" + elid).css({
-                "top": (thehs.y - ($("#" + elid).height() / 2)) + "px",
-                "left": (thehs.x - ($("#" + elid).width() / 2)) + "px",
-            });
-            if (hotspotsvisible)
-                $("#" + elid).show();
-        } else {
-            $("#" + elid).hide();
-        }
-
-    }
-
-    function toScreenPosition(obj) {
-        var vector = new THREE.Vector3();
-        var widthHalf = 0.5 * innerWidth;
-        var heightHalf = 0.5 * innerHeight;
-
-        // obj.updateMatrixWorld();
-        vector.setFromMatrixPosition(obj.matrixWorld);
-
-
-        vector.project(viewer.camera);
-
-        vector.x = (vector.x * widthHalf) + widthHalf;
-        vector.y = -(vector.y * heightHalf) + heightHalf;
-
-
-        return {
-            x: vector.x,
-            y: vector.y,
-            z: vector.z,
-        };
-
-    }
-
-    var currentPanorama;
-
-    function ChangePanorama(panorama) {
-
-        currentPanorama = panorama;
-        HideInfospots();
-        $("#loading").fadeIn();
-        $(".customhotspot").fadeOut();
-
-        viewer.setPanorama(window[panorama]);
-
-
-        $("#" + panorama).fadeIn();
-        $("#loading").fadeOut();
-
-
-    }
-
-
-    function HideInfospots() {
-        $(".customhotspot").fadeOut();
-    }
-
-    /*customjs*//*customjs-end*/
-</script>
+<a href="javascript:void(0)" id="sceneListToggle">
+    <img class="icon off" src="img/expand.png">
+    <img class="icon on" src="img/collapse.png">
+</a>
+
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+    <img class="icon" src="img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+    <img class="icon" src="img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+    <img class="icon" src="img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+    <img class="icon" src="img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+    <img class="icon" src="img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+    <img class="icon" src="img/minus.png">
+</a>
+
+<script src="vendor/screenfull.min.js"></script>
+<script src="vendor/bowser.min.js"></script>
+<script src="vendor/marzipano.js"></script>
+
+<script src="data.js"></script>
+<script src="index.js"></script>
 
 <!--olw carousel-->
 <script>
@@ -1433,6 +705,18 @@
         return new bootstrap.Tooltip(tooltipTriggerEl)
     })
 </script>
+<script>
+    $("#sidebarCollapse").click(function () {
+        $("#iconSideNav").toggleClass("rotate-180");
+    })
+</script>
+<!--loading-->
 
+<script type="text/javascript">
+    $(window).load(function() {
+        $('body').removeClass('preloading');
+        $('#preload').delay(2000).fadeOut('fast');
+    });
+</script>
 </body>
-</html><!--loadingtext-->SaoDo<!--loadingtext-end-->undefined
+</html>

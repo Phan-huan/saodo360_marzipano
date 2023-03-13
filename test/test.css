@@ -1,9 +1,0 @@
-.spinner-2 {
-    width: 50px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    border: 8px solid #1e78fd;
-    border-right-color: #c21111;
-    animation: s2 1s infinite linear;
-}
-@keyframes s2 {to{transform: rotate(1turn)}}
