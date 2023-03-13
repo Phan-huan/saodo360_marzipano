@@ -99,7 +99,9 @@ body.multiple-scenes.mobile #titleBar {
     z-index: 100;
 }
 
-
+.mobile #fullscreenToggle{
+    display: none;
+}
 
 
 
@@ -127,9 +129,6 @@ body.multiple-scenes.mobile #titleBar {
     z-index: 100;
 
 }
-
-
-
 
 
 
