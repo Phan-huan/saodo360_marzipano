@@ -99,12 +99,9 @@ body.multiple-scenes.mobile #titleBar {
     z-index: 100;
 }
 
-.mobile #fullscreenToggle{
+.mobile #fullscreenToggle {
     display: none;
 }
-
-
-
 
 
 #fullscreenToggle .icon.on {
@@ -129,7 +126,6 @@ body.multiple-scenes.mobile #titleBar {
     z-index: 100;
 
 }
-
 
 
 #autorotateToggle .icon.on {
@@ -763,7 +759,6 @@ body.view-control-buttons .viewControlButton {
 
 /*scrollbar*/
 .scrollbar {
-    margin-left: 22px;
     float: left;
     overflow-y: scroll;
 }
@@ -786,10 +781,12 @@ body.view-control-buttons .viewControlButton {
 #style-4::-webkit-resizer {
     width: 2px;
 }
+
 /*loading*/
 .preloading {
     overflow: hidden;
 }
+
 .preload-container {
     width: 100vw;
     height: 100vh;
@@ -805,6 +802,7 @@ body.view-control-buttons .viewControlButton {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
 .spinner-2 {
     margin-top: 20px;
     margin-left: auto;
@@ -816,7 +814,12 @@ body.view-control-buttons .viewControlButton {
     border-right-color: #c21111;
     animation: s2 0.5s infinite linear;
 }
-@keyframes s2 {to{transform: rotate(1turn)}}
+
+@keyframes s2 {
+    to {
+        transform: rotate(1turn)
+    }
+}
 
 /*carousel*/
 .owl-carousel {
@@ -840,7 +843,7 @@ body.view-control-buttons .viewControlButton {
     height: auto;
 }
 
-.mobile.owl-carousel .item .text {
+.mobile .owl-carousel .item .text {
     text-align: center;
     position: absolute;
 
@@ -848,6 +851,7 @@ body.view-control-buttons .viewControlButton {
     width: 100%;
     bottom: 0;
 }
+
 .owl-carousel .item .text {
     text-align: center;
     position: absolute;
@@ -864,9 +868,11 @@ body.view-control-buttons .viewControlButton {
 
     bottom: 0;
 }
-.iframeMap{
+
+.iframeMap {
     width: 35vw;
 }
-.mobile.iframeMap{
+
+.mobile .iframeMap {
     width: 70vw;
 }
