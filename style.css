@@ -876,3 +876,79 @@ background-color: transparent;
 .mobile .iframeMap {
     width: 70vw;
 }
+
+#sceneList {
+    overflow: scroll;
+    -webkit-transition: margin-left 0.5s ease-in-out;
+    transition: margin-left 0.5s ease-in-out;
+    padding-left: 35px;
+
+}
+
+.mobile #sceneList {
+
+}
+
+#sceneList .scenes {
+    background-color: transparent;
+
+}
+
+.mobile #sceneList {
+
+}
+
+.mobile #sceneList.enabled {
+
+}
+
+.mobile #sceneList .scenes {
+    height: 100%;
+}
+
+#sceneList.enabled {
+
+}
+
+#sceneList .scene {
+    display: block;
+
+    height: 30px;
+    text-decoration: none;
+}
+
+.mobile #sceneList .scene {
+    height: 40px;
+}
+
+#sceneList .scene .text {
+
+
+    line-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    list-style: none;
+    color: white;
+    margin-left: 20px;
+}
+
+.mobile #sceneList .scene .text {
+    line-height: 40px;
+}
+
+.no-touch #sceneList .scene:hover {
+    background-color: rgba(204, 33, 33, 0.7);
+
+
+}
+.no-touch #sceneList .scene:hover .text{
+    color: white;
+}
+
+#sceneList .scene.current {
+    background-color: rgba(204, 33, 33, 0.7);
+
+
+}
+

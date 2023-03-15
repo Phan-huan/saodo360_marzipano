@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="style.css">
 
 
-
-
     <!--    bootstrap-->
     <!--     Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +20,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
           integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <!--    jquery--><script src="jquery.js"></script>
+    <!--    jquery-->
+    <script src="jquery.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
     <!--    carousel-->
@@ -38,7 +37,8 @@
 <body class="multiple-scenes ">
 <!--loading-->
 <div id="loading" class="fullwrapper preloading">
-    <div id="preload" class="preload-container" style="display: table-cell; vertical-align: middle; text-align: center; color: white; font-size: 30px; padding: 50px;">
+    <div id="preload" class="preload-container"
+         style="display: table-cell; vertical-align: middle; text-align: center; color: white; font-size: 30px; padding: 50px;">
         <img style="height: 300px;margin-top: 5%" src="img/logoSaodo.png" alt="">
         <div class="spinner-2"></div>
     </div>
@@ -67,272 +67,131 @@
                     </div>
                 </div>
                 <div class="offcanvas-body" id="sceneList"
-                     style="border-bottom-right-radius: 30px;border-bottom-left-radius:30px;background: rgba(255,255,255,0.7);overflow: hidden;">
+                     style="border-bottom-right-radius: 30px;border-bottom-left-radius:30px;background: rgba(128,128,128,0.7);overflow: hidden;">
                     <div class="ul scrollbar scenes" id="style-4" role="group" aria-label="Basic radio"
                          style="overflow-y: scroll;height: 100%;">
                         <div class="mainMenu">
                             <p class="text_mainMenu">TỔNG QUAN KHUÔN VIÊN CỔNG TRƯỜNG</p>
                         </div>
-                        <a href="javascript:void(0)" class="scene" data-id="0-congtruong">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio1" data-bs-dismiss="offcanvas"
-                                    aria-label="Open">Cổng trường</label>
+                        <a href="javascript:void(0)" class="scene" data-id="0-congtruong" id="0-congtruong">
+                            <li class="text">Cổng trường</li>
                         </a>
-                        <a href="javascript:void(0)" class="scene" data-id="29-vuontruong">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio2" data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Vườn trường</label>
+
+                        <a href="javascript:void(0)" class="scene" data-id="29-vuontruong" id="29-vuontruong">
+                            <li class="text">Vườn trường</li>
                         </a>
 
                         <div class="mainMenu">
                             <p class="text_mainMenu">GIẢNG ĐƯỜNG A</p>
                         </div>
-                        <a href="javascript:void(0)" class="scene" data-id="21-sanhnhaa">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio3" data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Sảnh nhà A</label> </a>
 
-                        <a href="javascript:void(0)" class="scene" data-id="3-honnonbo">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio4" data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Hòn Non Bộ </label> </a>
+                        <a href="javascript:void(0)" class="scene" data-id="21-sanhnhaa" id="21-sanhnhaa">
+                            <li class="text">Sảnh nhà A</li>
+                        </a>
+                        <a href="javascript:void(0)" class="scene" data-id="3-honnonbo" id="3-honnonbo">
+                            <li class="text">Hòn Non Bộ</li>
+                        </a>
 
-                        <a href="javascript:void(0)" class="scene" data-id="9-phonghoithao">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio5" data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Phòng hội thảo</label> </a>
-
-                        <a href="javascript:void(0)" class="scene" data-id="7-phongdaotao">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio6" data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Phòng đào tạo</label> </a>
-
-                        <a href="javascript:void(0)" class="scene" data-id="15-phongtuyensinh">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio7" data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Phòng tuyển sinh</label> </a>
-
-                        <a href="javascript:void(0)" class="scene" data-id="12-phongquantri">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio8" data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Phòng quản trị </label> </a>
-
+                        <a href="javascript:void(0)" class="scene" data-id="9-phonghoithao" id="9-phonghoithao">
+                            <li class="text">Phòng hội thảo</li>
+                        </a>
+                        <a href="javascript:void(0)" class="scene" data-id="7-phongdaotao" id="7-phongdaotao">
+                            <li class="text">Phòng đào tạo</li>
+                        </a>
+                        <a href="javascript:void(0)" class="scene" data-id="15-phongtuyensinh" id="15-phongtuyensinh">
+                            <li class="text">Phòng tuyển sinh</li>
+                        </a>
+                        <a href="javascript:void(0)" class="scene" data-id="12-phongquantri" id="12-phongquantri">
+                            <li class="text">Phòng quản trị</li>
+                        </a>
 
                         <div class="mainMenu">
                             <p class="text_mainMenu">THƯ VIỆN</p>
                         </div>
-                        <a href="javascript:void(0)" class="scene" data-id="24-sanhtruocthuvien">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio34" autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio34" data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Sảnh trước</label> </a>
-
-                        <a href="javascript:void(0)" class="scene" data-id="28-trungtamthuvien">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio35" autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio35" data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Trung tâm thư viện</label> </a>
+                        <a href="javascript:void(0)" class="scene" data-id="24-sanhtruocthuvien" id="24-sanhtruocthuvien">
+                            <li class="text">Sảnh Trước</li>
+                        </a>
+                        <a href="javascript:void(0)" class="scene" data-id="28-trungtamthuvien" id="28-trungtamthuvien">
+                            <li class="text">Trung tâm thư viện</li>
+                        </a>
 
                         <div class="mainMenu">
                             <p class="text_mainMenu">NHÀ B</p>
                         </div>
-                        <a href="javascript:void(0)" class="scene" data-id="22-sanhtruocb">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio9" data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Sảnh trước</label>
+                        <a href="javascript:void(0)" class="scene" data-id="22-sanhtruocb" id="22-sanhtruocb">
+                            <li class="text">Sảnh Trước</li>
                         </a>
 
-                        <a href="javascript:void(0)" class="scene" data-id="18-sanhchinhb">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio10" autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio10" data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Sảnh chính</label>
+                        <a href="javascript:void(0)" class="scene" data-id="18-sanhchinhb" id="18-sanhchinhb">
+                            <li class="text">Sảnh chính</li>
                         </a>
 
-                        <a href="javascript:void(0)" class="scene" data-id="13-phongtochuchanhchinh">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio11" autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio11" data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Phòng tổ chức - hành chính</label>
+                        <a href="javascript:void(0)" class="scene" data-id="13-phongtochuchanhchinh" id="13-phongtochuchanhchinh">
+                            <li class="text">Phòng tổ chức - hành chính</li>
                         </a>
 
-                        <a href="javascript:void(0)" class="scene" data-id="10-phonghopb">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio12"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio12"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Phòng Họp</label>
+                        <a href="javascript:void(0)" class="scene" data-id="10-phonghopb" id="10-phonghopb">
+                            <li class="text">Phòng Họp</li>
                         </a>
 
-                        <a href="javascript:void(0)" class="scene" data-id="19-sanhchokinhte">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio13"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio13"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Sảnh chờ(khoa kinh tế)</label>
+                        <a href="javascript:void(0)" class="scene" data-id="19-sanhchokinhte" id="19-sanhchokinhte">
+                            <li class="text">Sảnh chờ(khoa kinh tế)</li>
                         </a>
 
-                        <a href="javascript:void(0)" class="scene" data-id="20-sanhchongoaingu">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio14"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio14"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Sảnh chờ(khoa du lịch & ngoại
-                                ngữ)</label>
+                        <a href="javascript:void(0)" class="scene" data-id="20-sanhchongoaingu" id="20-sanhchongoaingu">
+                            <li class="text">Sảnh chờ(khoa du lịch & ngoại ngữ)</li>
                         </a>
 
-                        <a href="javascript:void(0)" class="scene" data-id="14-phongtruyenthong">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio15"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio15"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Phòng truyền thống</label>
+                        <a href="javascript:void(0)" class="scene" data-id="14-phongtruyenthong" id="14-phongtruyenthong">
+                            <li class="text">Phòng truyền thống</li>
                         </a>
 
-                        <a href="javascript:void(0)" class="scene" data-id="25-sanhtruyenthong">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio16"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio16"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Sảnh truyền thống</label>
+                        <a href="javascript:void(0)" class="scene" data-id="25-sanhtruyenthong" id="25-sanhtruyenthong">
+                            <li class="text">Sảnh truyền thống</li>
                         </a>
 
-                        <a href="javascript:void(0)" class="scene" data-id="11-phongmaynhab-">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio33"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio33"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Phòng máy</label>
+                        <a href="javascript:void(0)" class="scene" data-id="11-phongmaynhab-" id="11-phongmaynhab-">
+                            <li class="text">Phòng máy</li>
                         </a>
 
 
                         <div class="mainMenu">
                             <p class="text_mainMenu">HỘI TRƯỜNG</p>
                         </div>
-                        <a href="javascript:void(0)" class="scene" data-id="23-sanhtruochoitruong_daiphunnuoc">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio17"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio17"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Sảnh trước & đài phun
-                                nước</label>
+                        <a href="javascript:void(0)" class="scene" data-id="23-sanhtruochoitruong_daiphunnuoc" id="23-sanhtruochoitruong_daiphunnuoc">
+                            <li class="text">Sảnh trước & đài phun nước</li>
                         </a>
 
-                        <a href="javascript:void(0)" class="scene" data-id="27-trungtamhoitruong">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio18"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio18"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Trung tâm hội trường</label>
+                        <a href="javascript:void(0)" class="scene" data-id="27-trungtamhoitruong" id="27-trungtamhoitruong">
+                            <li class="text">Trung tâm hội trường</li>
                         </a>
 
 
                         <div class="mainMenu">
                             <p class="text_mainMenu">KHU TIỆN ÍCH</p>
                         </div>
-                        <a href="javascript:void(0)" class="scene" data-id="6-nhadanang">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio19"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio19"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Nhà đa năng</label>
+                        <a href="javascript:void(0)" class="scene" data-id="6-nhadanang" id="6-nhadanang">
+                            <li class="text">Nhà đa năng</li>
                         </a>
-                        <a href="javascript:void(0)" class="scene" data-id="30-sanbongda">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio36"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio36"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Sân bóng đá</label>
+                        <a href="javascript:void(0)" class="scene" data-id="30-sanbongda" id="30-sanbongda">
+                            <li class="text">Sân bóng đá</li>
                         </a>
 
-                        <a href="javascript:void(0)" class="scene" data-id="16-sanbongchuyenngoaitroi">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio37"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio37"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Sân bóng chuyền</label>
+                        <a href="javascript:void(0)" class="scene" data-id="16-sanbongchuyenngoaitroi" id="16-sanbongchuyenngoaitroi">
+                            <li class="text">Sân bóng chuyền</li>
                         </a>
 
-                        <a href="javascript:void(0)" class="scene" data-id="17-sanbongrongoaitroi">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio38"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio38"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Sân bóng rổ</label>
+                        <a href="javascript:void(0)" class="scene" data-id="17-sanbongrongoaitroi" id="17-sanbongrongoaitroi">
+                            <li class="text">Sân bóng rổ</li>
                         </a>
-                        <a href="javascript:void(0)" class="scene" data-id="26-santhethao_theducdungcungoaitroi">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio39"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio39"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Sân TDTT ngoài trời</label>
+                        <a href="javascript:void(0)" class="scene" data-id="26-santhethao_theducdungcungoaitroi" id="26-santhethao_theducdungcungoaitroi">
+                            <li class="text">Sân TDTT ngoài trời</li>
                         </a>
-                        <a href="javascript:void(0)" class="scene" data-id="1-cangtin">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio20"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio20"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Căng tin
-                            </label>
+                        <a href="javascript:void(0)" class="scene" data-id="1-cangtin" id="1-cangtin">
+                            <li class="text">Căng tin</li>
                         </a>
-                        <a href="javascript:void(0)" class="scene" data-id="5-khuvuckituc">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio21"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio21"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Khu kí túc xá</label>
+                        <a href="javascript:void(0)" class="scene" data-id="5-khuvuckituc" id="5-khuvuckituc">
+                            <li class="text">Khu kí túc xá</li>
                         </a>
 
 
@@ -340,65 +199,35 @@
                             <p class="text_mainMenu">XƯỞNG KHOA ĐIỆN</p>
                         </div>
                         <a href="javascript:void(0)" class="scene" data-id="2-hanhlangcntt">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio23"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio23"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Khoa điện</label>
+                            <li class="text">Khoa điện</li>
                         </a>
 
                         <div class="mainMenu">
                             <p class="text_mainMenu">XƯỞNG KHOA Ô TÔ</p>
                         </div>
                         <a href="javascript:void(0)" class="scene" data-id="2-hanhlangcntt">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio24"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio24"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Khoa ô tô</label>
+                            <li class="text">Khoa ô tô</li>
                         </a>
 
                         <div class="mainMenu">
                             <p class="text_mainMenu">XƯỞNG KHOA MAY & THỜI TRANG</p>
                         </div>
                         <a href="javascript:void(0)" class="scene" data-id="2-hanhlangcntt">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio27"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio27">Khoa may và thời
-                                trang</label>
+                            <li class="text">Khoa may và thời trang</li>
                         </a>
 
                         <div class="mainMenu">
                             <p class="text_mainMenu">XƯỞNG KHOA THỰC PHẨM & HÓA HỌC</p>
                         </div>
                         <a href="javascript:void(0)" class="scene" data-id="2-hanhlangcntt">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio28"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio28"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Khoa thực phẩm và hóa
-                                học</label>
+                            <li class="text">Khoa thực phẩm và hóa học</li>
                         </a>
 
                         <div class="mainMenu">
                             <p class="text_mainMenu">XƯỞNG KHOA CƠ KHÍ</p>
                         </div>
-                        <a href="javascript:void(0)" class="scene" data-id="2-hanhlangcntt">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio25"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio25"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Khoa cơ Khí</label>
+                        <a href="javascript:void(0)" class="scene" data-id="2-hanhlangcntt" >
+                            <li class="text">Khoa cơ Khí</li>
                         </a>
 
                         <div class="mainMenu">
@@ -406,35 +235,17 @@
                         </div>
 
 
-                        <a href="javascript:void(0)" class="scene" data-id="2-hanhlangcntt">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio30"
-                                   autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio30"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Hành lang</label>
+                        <a href="javascript:void(0)" class="scene" data-id="2-hanhlangcntt" id="2-hanhlangcntt">
+                            <li class="text">Hành lang</li>
                         </a>
 
 
-                        <a href="javascript:void(0)" class="scene" data-id="4-khonggiansangtaocntt">
-                            <input type="radio" class="btn-check"
-                                   name="btnradio" id="btnradio31" autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio31"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Không gian sáng tạo</label>
+                        <a href="javascript:void(0)" class="scene" data-id="4-khonggiansangtaocntt" id="4-khonggiansangtaocntt">
+                            <li class="text">Không gian sáng tạo</li>
                         </a>
 
-                        <a href="javascript:void(0)" class="scene" data-id="8-phonghoccntt">
-                            <input type="radio" class="btn-check" name="btnradio"
-                                   id="btnradio32" autocomplete="off">
-                            <label
-                                    style="width: 100%;text-align: left;border: none;border-radius: 0"
-                                    class="btn btn-outline-danger listLInk" for="btnradio32"
-                                    data-bs-dismiss="offcanvas"
-                                    aria-label="Close">Phòng học</label>
+                        <a href="javascript:void(0)" class="scene" data-id="8-phonghoccntt" id="8-phonghoccntt">
+                            <li class="text">Phòng học</li>
                         </a>
 
 
@@ -447,7 +258,8 @@
             <div style="width: 35vw;height: 50vh" class="offcanvas offcanvas-end"
                  data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling1"
                  aria-labelledby="offcanvasScrollingLabel">
-                <iframe class="iframeMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3129.889067409314!2d106.39482492310081!3d21.10912338346499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31357909df4b3bff%3A0xd8784721e55d91ca!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBTYW8gxJDhu48!5e0!3m2!1svi!2s!4v1667893798451!5m2!1svi!2s"
+                <iframe class="iframeMap"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3129.889067409314!2d106.39482492310081!3d21.10912338346499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31357909df4b3bff%3A0xd8784721e55d91ca!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBTYW8gxJDhu48!5e0!3m2!1svi!2s!4v1667893798451!5m2!1svi!2s"
                         style="border:3px solid red;height: 50vh;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <button style="position: absolute;top: 5px;left: 5px;background-color: blue;opacity: 1;" type="button"
@@ -455,21 +267,14 @@
             </div>
         </div>
 
-        <div class="listImage">
+        <div class="listImage" id="sceneList1">
             <div style="z-index: 0;background: rgba(200,0,0,0.7);height: 170px;" class="offcanvas offcanvas-bottom"
                  data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling2"
                  aria-labelledby="offcanvasScrollingLabel">
                 <div class="owl-carousel">
+
                     <div class="item"
-                         onclick="document.getElementById('btnradio29').click()">
-                        <img src="listImage_small/tongquanngoaixuongX4.jpg"
-                             alt="image" loading="lazy"/>
-                        <div class="text">
-                            Tổng quan bên ngoài xưởng X4
-                        </div>
-                    </div>
-                    <div class="item"
-                         onclick="document.getElementById('btnradio30').click()">
+                         onclick="document.getElementById('2-hanhlangcntt').click()">
                         <img src="listImage_small/hanhlangCNTT.jpg"
                              alt="image" loading="lazy"/>
                         <div class="text">
@@ -477,7 +282,7 @@
                         </div>
                     </div>
                     <div class="item"
-                         onclick="document.getElementById('btnradio31').click()">
+                         onclick="document.getElementById('4-khonggiansangtaocntt').click()">
                         <img src="listImage_small/khonggiansangtaoCNTT.jpg"
                              alt="image" loading="lazy"/>
                         <div class="text">
@@ -485,12 +290,13 @@
                         </div>
                     </div>
                     <div class="item"
-                         onclick="document.getElementById('btnradio32').click()">
-                        <img src="listImage_small/phonghocCNTT.jpg"
-                             alt="image" loading="lazy"/>
-                        <div class="text">
-                            Phòng học CNTT
-                        </div>
+                         onclick="document.getElementById('8-phonghoccntt').click()">
+                            <img src="listImage_small/phonghocCNTT.jpg"
+                                 alt="image" loading="lazy"/>
+                            <div class="text">
+                                Phòng học CNTT
+                            </div>
+
                     </div>
                     <div class="item">
                         <img src="listImage_small/khuvuckituc.jpg"
@@ -587,7 +393,8 @@
             </button>
 
             <a type="button" href="javascript:void(0)" id="autorotateToggle">
-                <button style="height: 37px; width: 40px;margin-left: 20px;border:1px solid white" data-bs-placement="top"
+                <button style="height: 37px; width: 40px;margin-left: 20px;border:1px solid white"
+                        data-bs-placement="top"
                         class="btn btn-primary tooltipa icon off" type="button">
                     <i class="fa-solid fa-play"></i>
                     <span class="tooltiptext">Quay</span>
@@ -602,7 +409,8 @@
             </a>
 
             <a type="button" href="javascript:void(0)" id="fullscreenToggle">
-                <button style="height: 37px; width: 40px;margin-left: 20px;border:1px solid white" data-bs-placement="top"
+                <button style="height: 37px; width: 40px;margin-left: 20px;border:1px solid white"
+                        data-bs-placement="top"
                         class="btn btn-primary tooltipa icon off" type="button">
                     <i class="fa-solid fa-expand"></i>
                     <span class="tooltiptext">Toàn màn hình</span>
@@ -713,7 +521,7 @@
 <!--loading-->
 
 <script type="text/javascript">
-    $(window).load(function() {
+    $(window).load(function () {
         $('body').removeClass('preloading');
         $('#preload').delay(2000).fadeOut('fast');
     });

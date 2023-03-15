@@ -88,7 +88,7 @@ var APP_DATA = {
         },
         {
             "id": "3-honnonbo",
-            "name": "honnonbo",
+            "name": "Hòn non bộ",
             "levels": [
                 {
                     "tileSize": 256,
@@ -111,7 +111,7 @@ var APP_DATA = {
         },
         {
             "id": "4-khonggiansangtaocntt",
-            "name": "khonggiansangtaoCNTT",
+            "name": "Không gian sáng tạo-CNTT",
             "levels": [
                 {
                     "tileSize": 256,
@@ -142,7 +142,7 @@ var APP_DATA = {
         },
         {
             "id": "5-khuvuckituc",
-            "name": "khuvuckituc",
+            "name": "Khu vực kí túc xá",
             "levels": [
                 {
                     "tileSize": 256,
@@ -173,7 +173,7 @@ var APP_DATA = {
         },
         {
             "id": "6-nhadanang",
-            "name": "nhadanang",
+            "name": "Nhà đa năng",
             "levels": [
                 {
                     "tileSize": 256,
@@ -219,7 +219,7 @@ var APP_DATA = {
         },
         {
             "id": "8-phonghoccntt",
-            "name": "phonghocCNTT",
+            "name": "Phòng máy-CNTT",
             "levels": [
                 {
                     "tileSize": 256,
@@ -250,7 +250,7 @@ var APP_DATA = {
         },
         {
             "id": "9-phonghoithao",
-            "name": "phonghoithao",
+            "name": "Phòng hội thảo",
             "levels": [
                 {
                     "tileSize": 256,
@@ -273,7 +273,7 @@ var APP_DATA = {
         },
         {
             "id": "10-phonghopb",
-            "name": "phonghopB",
+            "name": "Phòng họp - Nhà B",
             "levels": [
                 {
                     "tileSize": 256,
@@ -296,7 +296,7 @@ var APP_DATA = {
         },
         {
             "id": "11-phongmaynhab-",
-            "name": "phongmaynhaB ",
+            "name": "Phòng máy - Nhà B",
             "levels": [
                 {
                     "tileSize": 256,
@@ -327,7 +327,7 @@ var APP_DATA = {
         },
         {
             "id": "12-phongquantri",
-            "name": "phongquantri",
+            "name": "Phòng quản trị",
             "levels": [
                 {
                     "tileSize": 256,
@@ -350,7 +350,7 @@ var APP_DATA = {
         },
         {
             "id": "13-phongtochuchanhchinh",
-            "name": "phongtochuchanhchinh",
+            "name": "Phòng tổ chức hành chính",
             "levels": [
                 {
                     "tileSize": 256,
@@ -373,7 +373,7 @@ var APP_DATA = {
         },
         {
             "id": "14-phongtruyenthong",
-            "name": "phongtruyenthong",
+            "name": "Phòng truyền thống",
             "levels": [
                 {
                     "tileSize": 256,
@@ -396,7 +396,7 @@ var APP_DATA = {
         },
         {
             "id": "15-phongtuyensinh",
-            "name": "phongtuyensinh",
+            "name": "Phòng tuyển sinh",
             "levels": [
                 {
                     "tileSize": 256,
@@ -419,7 +419,7 @@ var APP_DATA = {
         },
         {
             "id": "16-sanbongchuyenngoaitroi",
-            "name": "sanbongchuyenngoaitroi",
+            "name": "Sân bóng chuyền ngoài trời",
             "levels": [
                 {
                     "tileSize": 256,
@@ -442,7 +442,7 @@ var APP_DATA = {
         },
         {
             "id": "17-sanbongrongoaitroi",
-            "name": "sanbongrongoaitroi",
+            "name": "Sân bóng rổ ngoài trời",
             "levels": [
                 {
                     "tileSize": 256,
@@ -465,7 +465,7 @@ var APP_DATA = {
         },
         {
             "id": "18-sanhchinhb",
-            "name": "sanhchinhB",
+            "name": "Sảnh chính - Nhà B",
             "levels": [
                 {
                     "tileSize": 256,
@@ -488,7 +488,7 @@ var APP_DATA = {
         },
         {
             "id": "19-sanhchokinhte",
-            "name": "sanhchokinhte",
+            "name": "Sảnh T4(KGST khoa kinh tế)",
             "levels": [
                 {
                     "tileSize": 256,
@@ -519,7 +519,7 @@ var APP_DATA = {
         },
         {
             "id": "20-sanhchongoaingu",
-            "name": "sanhchongoaingu",
+            "name": "Sảnh T5(KGST khoa du lịch & ngoại ngữ)",
             "levels": [
                 {
                     "tileSize": 256,
@@ -545,12 +545,17 @@ var APP_DATA = {
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
-            "linkHotspots": [],
+            "linkHotspots": [{
+                "yaw": -1.40616756323038246,
+                "pitch": 0.1405946888690238,
+                "rotation": 3.1,
+                "target": "19-sanhchokinhte",
+            }],
             "infoHotspots": []
         },
         {
             "id": "21-sanhnhaa",
-            "name": "sanhnhaA",
+            "name": "Sảnh chính - Nhà A",
             "levels": [
                 {
                     "tileSize": 256,
@@ -573,7 +578,7 @@ var APP_DATA = {
         },
         {
             "id": "22-sanhtruocb",
-            "name": "sanhtruocB",
+            "name": "Sảnh trước - Nhà B",
             "levels": [
                 {
                     "tileSize": 256,
@@ -596,7 +601,7 @@ var APP_DATA = {
         },
         {
             "id": "23-sanhtruochoitruong_daiphunnuoc",
-            "name": "sanhtruochoitruong_daiphunnuoc",
+            "name": "Khu vực đài phun nước",
             "levels": [
                 {
                     "tileSize": 256,
@@ -619,7 +624,7 @@ var APP_DATA = {
         },
         {
             "id": "24-sanhtruocthuvien",
-            "name": "sanhtruocthuvien",
+            "name": "Sảnh Trước - Thư viện",
             "levels": [
                 {
                     "tileSize": 256,
@@ -650,7 +655,7 @@ var APP_DATA = {
         },
         {
             "id": "25-sanhtruyenthong",
-            "name": "sanhtruyenthong",
+            "name": "Sảnh truyền thống",
             "levels": [
                 {
                     "tileSize": 256,
@@ -673,7 +678,7 @@ var APP_DATA = {
         },
         {
             "id": "26-santhethao_theducdungcungoaitroi",
-            "name": "santhethao_theducdungcungoaitroi",
+            "name": "Sân TD&TT tổng hợp ngoài trời",
             "levels": [
                 {
                     "tileSize": 256,
@@ -696,7 +701,7 @@ var APP_DATA = {
         },
         {
             "id": "27-trungtamhoitruong",
-            "name": "trungtamhoitruong",
+            "name": "Trung tâm hội trường",
             "levels": [
                 {
                     "tileSize": 256,
@@ -719,7 +724,7 @@ var APP_DATA = {
         },
         {
             "id": "28-trungtamthuvien",
-            "name": "trungtamthuvien",
+            "name": "Trung tâm thư viện",
             "levels": [
                 {
                     "tileSize": 256,
@@ -742,7 +747,7 @@ var APP_DATA = {
         },
         {
             "id": "29-vuontruong",
-            "name": "vuontruong",
+            "name": "Vườn Trường",
             "levels": [
                 {
                     "tileSize": 256,
