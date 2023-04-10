@@ -219,7 +219,7 @@ var APP_DATA = {
         },
         {
             "id": "8-phonghoccntt",
-            "name": "Phòng máy-CNTT",
+            "name": "Phòng học-CNTT",
             "levels": [
                 {
                     "tileSize": 256,
@@ -514,7 +514,12 @@ var APP_DATA = {
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
-            "linkHotspots": [],
+            "linkHotspots": [{
+                "yaw": 0.10616756323038246,
+                "pitch": 0.0005946888690238,
+                "rotation": 0,
+                "target": "20-sanhchongoaingu",
+            }],
             "infoHotspots": []
         },
         {
@@ -546,11 +551,17 @@ var APP_DATA = {
                 "fov": 1.5707963267948966
             },
             "linkHotspots": [{
-                "yaw": -1.40616756323038246,
-                "pitch": 0.1405946888690238,
+                "yaw": -0.10616756323038246,
+                "pitch": 0.0005946888690238,
                 "rotation": 3.1,
                 "target": "19-sanhchokinhte",
-            }],
+            },
+                {
+                    "yaw": -0.67616756323038246,
+                    "pitch": 0.0005946888690238,
+                    "rotation": 3.1,
+                    "target": "11-phongmaynhab-",
+                }],
             "infoHotspots": []
         },
         {
