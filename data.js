@@ -452,9 +452,18 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
-                }
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
+                },
+
             ],
-            "faceSize": 75,
+            "faceSize": 1500,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -622,9 +631,18 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
-                }
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
+                },
+
             ],
-            "faceSize": 75,
+            "faceSize": 1500,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -699,9 +717,18 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
-                }
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
+                },
+
             ],
-            "faceSize": 75,
+            "faceSize": 1500,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -768,9 +795,18 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
-                }
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
+                },
+
             ],
-            "faceSize": 75,
+            "faceSize": 1500,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
