@@ -23,7 +23,7 @@ var APP_DATA = {
                     "size": 2048
                 }
             ],
-            "faceSize": 1500,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -295,7 +295,7 @@ var APP_DATA = {
             "infoHotspots": []
         },
         {
-            "id": "11-phongmaynhab-",
+            "id": "11-phongmaynhab",
             "name": "Phòng máy - Nhà B",
             "levels": [
                 {
@@ -316,7 +316,7 @@ var APP_DATA = {
                     "size": 2048
                 }
             ],
-            "faceSize": 1500,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -463,7 +463,7 @@ var APP_DATA = {
                 },
 
             ],
-            "faceSize": 1500,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -524,7 +524,7 @@ var APP_DATA = {
                 "fov": 1.5707963267948966
             },
             "linkHotspots": [{
-                "yaw": 0.10616756323038246,
+                "yaw": -1.66616756323038246,
                 "pitch": 0.0005946888690238,
                 "rotation": 0,
                 "target": "20-sanhchongoaingu",
@@ -553,24 +553,24 @@ var APP_DATA = {
                     "size": 2048
                 }
             ],
-            "faceSize": 1500,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
             "linkHotspots": [{
-                "yaw": -0.10616756323038246,
+                "yaw": -1.46616756323038246,
                 "pitch": 0.0005946888690238,
                 "rotation": 3.1,
                 "target": "19-sanhchokinhte",
             },
-                {
-                    "yaw": -0.67616756323038246,
-                    "pitch": 0.0005946888690238,
-                    "rotation": 3.1,
-                    "target": "11-phongmaynhab-",
-                }],
+            {
+                "yaw": -2.25616756323038246,
+                "pitch": 0.0005946888690238,
+                "rotation": 3.1,
+                "target": "11-phongmaynhab",
+            }],
             "infoHotspots": []
         },
         {
@@ -642,7 +642,7 @@ var APP_DATA = {
                 },
 
             ],
-            "faceSize": 1500,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -673,7 +673,7 @@ var APP_DATA = {
                     "size": 2048
                 }
             ],
-            "faceSize": 1500,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -728,7 +728,7 @@ var APP_DATA = {
                 },
 
             ],
-            "faceSize": 1500,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -806,7 +806,7 @@ var APP_DATA = {
                 },
 
             ],
-            "faceSize": 1500,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -838,7 +838,7 @@ var APP_DATA = {
                 },
 
             ],
-            "faceSize": 1500,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,

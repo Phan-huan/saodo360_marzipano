@@ -922,8 +922,6 @@ background-color: transparent;
 }
 
 #sceneList .scene .text {
-
-
     line-height: 30px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -950,5 +948,10 @@ background-color: transparent;
     background-color: rgba(204, 33, 33, 0.7);
 
 
+}
+@media (max-width:600px) {
+    .abc{
+        width: 50%;
+    }
 }
 
