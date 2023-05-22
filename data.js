@@ -749,9 +749,18 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
-                }
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
+                },
+
             ],
-            "faceSize": 75,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -846,7 +855,104 @@ var APP_DATA = {
             },
             "linkHotspots": [],
             "infoHotspots": []
-        }
+        },
+        {
+            "id": "31-xdien_kgstkhoadien",
+            "name": "Không gian sáng tạo-Khoa điện",
+            "levels": [
+                {
+                    "tileSize": 256,
+                    "size": 256,
+                    "fallbackOnly": true
+                },
+                {
+                    "tileSize": 512,
+                    "size": 512
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
+                },
+
+            ],
+            "faceSize": 2000,
+            "initialViewParameters": {
+                "pitch": 0,
+                "yaw": 0,
+                "fov": 1.5707963267948966
+            },
+            "linkHotspots": [],
+            "infoHotspots": []
+        },
+        {
+            "id": "32-xdien_hanhlang",
+            "name": "Xưởng điện - hành lang",
+            "levels": [
+                {
+                    "tileSize": 256,
+                    "size": 256,
+                    "fallbackOnly": true
+                },
+                {
+                    "tileSize": 512,
+                    "size": 512
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
+                },
+
+            ],
+            "faceSize": 2000,
+            "initialViewParameters": {
+                "pitch": 0,
+                "yaw": 0,
+                "fov": 1.5707963267948966
+            },
+            "linkHotspots": [],
+            "infoHotspots": []
+        },
+        {
+            "id": "33-xdien-phongthuchanh",
+            "name": "Xưởng điện - phòng thực hành",
+            "levels": [
+                {
+                    "tileSize": 256,
+                    "size": 256,
+                    "fallbackOnly": true
+                },
+                {
+                    "tileSize": 512,
+                    "size": 512
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
+                },
+
+            ],
+            "faceSize": 2000,
+            "initialViewParameters": {
+                "pitch": 0,
+                "yaw": 0,
+                "fov": 1.5707963267948966
+            },
+            "linkHotspots": [],
+            "infoHotspots": []
+        },
+
     ],
     "name": "Project Title",
     "settings": {
