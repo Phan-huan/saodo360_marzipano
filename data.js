@@ -885,7 +885,12 @@ var APP_DATA = {
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
-            "linkHotspots": [],
+            "linkHotspots": [{
+                "yaw": 2.8,
+                "pitch": 0.3,
+                "rotation": 0,
+                "target": "32-xdien_hanhlang",
+            },],
             "infoHotspots": []
         },
         {
@@ -917,7 +922,12 @@ var APP_DATA = {
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
-            "linkHotspots": [],
+            "linkHotspots": [{
+                "yaw": 1.6,
+                "pitch": 0.14,
+                "rotation": 3.1,
+                "target": "33-xdien-phongthuchanh",
+            },],
             "infoHotspots": []
         },
         {
@@ -949,7 +959,12 @@ var APP_DATA = {
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
-            "linkHotspots": [],
+            "linkHotspots": [{
+                "yaw": -1.46616756323038246,
+                "pitch": 0.0005946888690238,
+                "rotation": 3.1,
+                "target": "32-xdien_hanhlang",
+            },],
             "infoHotspots": []
         },
 
