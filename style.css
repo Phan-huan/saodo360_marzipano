@@ -81,7 +81,7 @@ body.multiple-scenes.mobile #titleBar {
     padding: 5px;
 
     background-color: transparent;
-    color: #860202;
+    color: #d70606;
 
     -moz-user-select: text;
     -webkit-user-select: text;
@@ -954,4 +954,9 @@ background-color: transparent;
         width: 50%;
     }
 }
-
+.modal-body img{
+    width: 100%;
+}
+.modal-body p{
+    font-size: 19px;
+}

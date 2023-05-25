@@ -36,13 +36,13 @@
 </head>
 <body class="multiple-scenes ">
 <!--loading-->
-<div id="loading" class="fullwrapper preloading">
-    <div id="preload" class="preload-container"
-         style="display: table-cell; vertical-align: middle; text-align: center; color: white; font-size: 30px; padding: 50px;">
-        <img style="height: 300px;margin-top: 5%" src="img/logoSaodo.png" alt="">
-        <div class="spinner-2"></div>
-    </div>
-</div>
+<!--<div id="loading" class="fullwrapper preloading">-->
+<!--    <div id="preload" class="preload-container"-->
+<!--         style="display: table-cell; vertical-align: middle; text-align: center; color: white; font-size: 30px; padding: 50px;">-->
+<!--        <img style="height: 300px;margin-top: 5%" src="img/logoSaodo.png" alt="">-->
+<!--        <div class="spinner-2"></div>-->
+<!--    </div>-->
+<!--</div>-->
 
 <div id="pano"></div>
 <div class="layout" style="position: absolute;">
@@ -438,39 +438,61 @@
                     <span class="tooltiptext">Thu màn hình</span>
                 </button>
             </a>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-backdrop="false">
-                Launch demo modal
-            </button>
+        </div>
+    </div>
+</div>
+<!-- Button trigger modal -->
+<button style="position: absolute;bottom: 0;right: 0;background: transparent;font-weight: bold;height: 40px;width: 40px;font-size: 25px;border: none;color: white" type="button;"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-backdrop="false">
+    ?
+</button>
 
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="false">
-                <div class="modal-dialog modal-dialog-scrollable" data-backdrop="false">
-                    <div class="modal-content" >
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <h3>Some text to enable scrolling..</h3>
-                            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <h3>Some text to enable scrolling..</h3>
-                            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="false">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable" data-backdrop="false">
+        <div class="modal-content" >
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Hướng dẫn thêm ảnh lên source code</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Phần 1: Chuẩn bị ảnh</h3>
+                <h5>Bước 1: Chụp ảnh</h5>
+                <p>Sử dụng điện thoại hoặc máy ảnh đặt cố định trên chân máy ảnh </p>
+                <p>Chụp lại tất cả các góc độ đảm bảo rằng môi khung hình trùng khớp với nhau</p>
+                <img src="./img/huongdan/p1b1.png" alt="">
+                <h5>Bước 2: Ghép ảnh panorama</h5>
+                <p>Tải phần mềm <a href="https://www.tshsoft.de/en/download_en">PanoramaStudio </a> </p>
+                <p>Mở phần mềm và chọn chế độ <span style="font-weight: bold">Creat multi-row panorama</span></p>
+                <img src="./img/huongdan/p1b2.png" alt="">
+                <p>Chọn <span style="font-weight: bold">Import</span> rồi chọn tất cả các ảnh đã chụp tại một vị trí</p>
+                <img src="./img/huongdan/p1b2_2.png" alt="">
+                <p>Chọn <span style="font-weight: bold">Align image</span> rồi đợi cho phần mềm tự động ghép ảnh</p>
+                <img src="./img/huongdan/p1b2_3.png" alt="">
+                <p>Sau khi phần mềm ghép xong , chọn <span style="font-weight: bold">edit ->Straighten horizon...</span> rồi dùng chuột kéo vị trí cần làm điểm xuất phát ra trung tâm khung hình</p>
+                <p>Chỉnh xong ấn <span style="font-weight: bold">Done!</span> để thoát</p>
+                <img src="./img/huongdan/p1b2_4.png" alt="">
+                <p>Chọn Render (nếu như ảnh bị khuyết một ít ở trên và dưới hãy kéo khung đỏ ra hết cỡ) ,sau đó chọn <span style="font-weight: bold">Ok</span> để phần mềm hoàn thiện lại ảnh sau đó lưu về máy.</p>
+                <img src="./img/huongdan/p1b2_5.png" alt="">
+                <h5>Bước 3: Chỉnh ảnh lại bằng <span style="font-weight: bold">PhotoShop</span></h5>
+                <p>tải và sử dụng <span style="font-weight: bold">photoShop</span> mở ảnh panorama vừa lưu lên</p>
+                <img src="./img/huongdan/p1b3_1.png" alt="">
+                <p>Chọn <span style="font-weight: bold">Image ->Image rotation ->flip canvas vertical</span> để đảo ngược ảnh</p>
+                <img src="./img/huongdan/p1b3_2.png" alt="">
+                <p>Chọn <span style="font-weight: bold">Image-> Image Size</span> sửa size ảnh cho width và height bằng 20000 để ảnh thành hình vuông</p>
+                <img src="./img/huongdan/p1b3_3.png" alt="">
+                <p>Chọn <span style="font-weight: bold">Distort -> Poler coordinates...</span></p>
+                <img src="./img/huongdan/p1b3_4.png" alt="">
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+
             </div>
         </div>
     </div>
 </div>
-
 <div id="titleBar">
     <h1 class="sceneName"></h1>
 </div>
