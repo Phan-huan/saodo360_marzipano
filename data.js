@@ -2,8 +2,58 @@ var APP_DATA = {
     "scenes": [
 
         {
-            "id": "0-congtruong",
-            "name": "Cổng trường",
+            "id": "0-khuvuccongtruong",
+            "name": "Khu vực cổng trường",
+            "levels": [
+                {
+                    "tileSize": 256,
+                    "size": 256,
+                    "fallbackOnly": true
+                },
+                {
+                    "tileSize": 512,
+                    "size": 512
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
+                }
+            ],
+            "faceSize": 2000,
+            "initialViewParameters": {
+                "pitch": 0,
+                "yaw": 0,
+                "fov": 1.5707963267948966
+            },
+            "linkHotspots": [
+                {
+                    "yaw": 1.6,
+                    "pitch": 0,
+                    "rotation": 0,
+                    "target": "17-sanbongrongoaitroi",
+                },
+                {
+                    "yaw": 0.03,
+                    "pitch": 0.,
+                    "rotation": 0,
+                    "target": "21-nha_a_sanh",
+                },
+                {
+                    "yaw": -1.6,
+                    "pitch": 0,
+                    "rotation": 0,
+                    "target": "16-sanbongchuyenngoaitroi",
+                },
+            ],
+            "infoHotspots": []
+        },
+        {
+            "id": "1-cangtin",
+            "name": "Căng tin",
             "levels": [
                 {
                     "tileSize": 256,
@@ -33,30 +83,7 @@ var APP_DATA = {
             "infoHotspots": []
         },
         {
-            "id": "1-cangtin",
-            "name": "Căng tin",
-            "levels": [
-                {
-                    "tileSize": 256,
-                    "size": 256,
-                    "": true
-                },
-                {
-                    "tileSize": 512,
-                    "size": 512
-                }
-            ],
-            "faceSize": 2000,
-            "initialViewParameters": {
-                "pitch": 0,
-                "yaw": 0,
-                "fov": 1.5707963267948966
-            },
-            "linkHotspots": [],
-            "infoHotspots": []
-        },
-        {
-            "id": "2-hanhlangcntt",
+            "id": "2-xtin_hanhlang",
             "name": "Xưởng CNTT-Hành lang",
             "levels": [
                 {
@@ -87,8 +114,8 @@ var APP_DATA = {
             "infoHotspots": []
         },
         {
-            "id": "3-honnonbo",
-            "name": "Hòn non bộ",
+            "id": "3-xmay_sanh",
+            "name": "Sảnh - Không gian sáng tạo khoa may",
             "levels": [
                 {
                     "tileSize": 256,
@@ -98,9 +125,17 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
                 }
             ],
-            "faceSize": 75,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -110,7 +145,7 @@ var APP_DATA = {
             "infoHotspots": []
         },
         {
-            "id": "4-khonggiansangtaocntt",
+            "id": "4-xtin_khonggiansangtao",
             "name": "Không gian sáng tạo-CNTT",
             "levels": [
                 {
@@ -183,9 +218,17 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
                 }
             ],
-            "faceSize": 75,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -195,7 +238,7 @@ var APP_DATA = {
             "infoHotspots": []
         },
         {
-            "id": "7-phongdaotao",
+            "id": "7-nha_a_phongdaotao",
             "name": "Phòng đào tạo",
             "levels": [
                 {
@@ -206,9 +249,17 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
                 }
             ],
-            "faceSize": 75,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -218,7 +269,7 @@ var APP_DATA = {
             "infoHotspots": []
         },
         {
-            "id": "8-phonghoccntt",
+            "id": "8-xtin_phongmay",
             "name": "Phòng học-CNTT",
             "levels": [
                 {
@@ -249,7 +300,7 @@ var APP_DATA = {
             "infoHotspots": []
         },
         {
-            "id": "9-phonghoithao",
+            "id": "9-nha_a_phonghoithao",
             "name": "Phòng hội thảo",
             "levels": [
                 {
@@ -260,9 +311,17 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
                 }
             ],
-            "faceSize": 75,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -272,7 +331,7 @@ var APP_DATA = {
             "infoHotspots": []
         },
         {
-            "id": "10-phonghopb",
+            "id": "10-nha_b_phonghop",
             "name": "Phòng họp - Nhà B",
             "levels": [
                 {
@@ -283,9 +342,17 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
                 }
             ],
-            "faceSize": 75,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -295,7 +362,7 @@ var APP_DATA = {
             "infoHotspots": []
         },
         {
-            "id": "11-phongmaynhab",
+            "id": "11-nha_b_phongmay",
             "name": "Phòng máy - Nhà B",
             "levels": [
                 {
@@ -326,7 +393,7 @@ var APP_DATA = {
             "infoHotspots": []
         },
         {
-            "id": "12-phongquantri",
+            "id": "12-nha_a_phongquantri",
             "name": "Phòng quản trị",
             "levels": [
                 {
@@ -337,9 +404,17 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
                 }
             ],
-            "faceSize": 75,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -349,7 +424,7 @@ var APP_DATA = {
             "infoHotspots": []
         },
         {
-            "id": "13-phongtochuchanhchinh",
+            "id": "13-nha_b_phongtochuchanhchinh",
             "name": "Phòng tổ chức hành chính",
             "levels": [
                 {
@@ -360,9 +435,17 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
                 }
             ],
-            "faceSize": 75,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -372,7 +455,7 @@ var APP_DATA = {
             "infoHotspots": []
         },
         {
-            "id": "14-phongtruyenthong",
+            "id": "14-nha_b_phongtruyenthong",
             "name": "Phòng truyền thống",
             "levels": [
                 {
@@ -383,9 +466,17 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
                 }
             ],
-            "faceSize": 75,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -395,7 +486,7 @@ var APP_DATA = {
             "infoHotspots": []
         },
         {
-            "id": "15-phongtuyensinh",
+            "id": "15-nha_a_phongtuyensinh",
             "name": "Phòng tuyển sinh",
             "levels": [
                 {
@@ -406,9 +497,17 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
                 }
             ],
-            "faceSize": 75,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -429,15 +528,30 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
                 }
             ],
-            "faceSize": 75,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
-            "linkHotspots": [],
+            "linkHotspots": [
+                {
+                    "yaw": 0,
+                    "pitch": 0,
+                    "rotation": 3.1,
+                    "target": "22-nha_b_sanhtruoc",
+                },
+            ],
             "infoHotspots": []
         },
         {
@@ -469,11 +583,24 @@ var APP_DATA = {
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
-            "linkHotspots": [],
+            "linkHotspots": [
+                {
+                    "yaw": -0.15,
+                    "pitch": 0,
+                    "rotation": 3.1,
+                    "target": "22-nha_b_sanhtruoc",
+                },
+                {
+                    "yaw": 3.16,
+                    "pitch": 0,
+                    "rotation": 3.1,
+                    "target": "0-khuvuccongtruong",
+                },
+            ],
             "infoHotspots": []
         },
         {
-            "id": "18-sanhchinhb",
+            "id": "18-nha_b_sanhchinh",
             "name": "Sảnh chính - Nhà B",
             "levels": [
                 {
@@ -484,19 +611,52 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
                 }
             ],
-            "faceSize": 75,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
-            "linkHotspots": [],
+            "linkHotspots": [
+                {
+                    "yaw": 3,
+                    "pitch": 0,
+                    "rotation": 3.1,
+                    "target": "13-nha_b_phongtochuchanhchinh",
+                },
+                {
+                    "yaw": -1.6,
+                    "pitch": 0.25,
+                    "rotation": 3.1,
+                    "target": "22-nha_b_sanhtruoc",
+                },
+                {
+                    "yaw": 1.48,
+                    "pitch": 0,
+                    "rotation": 0,
+                    "target": "10-nha_b_phonghop",
+                },
+                {
+                    "yaw": 1.68,
+                    "pitch": 0,
+                    "rotation": 0,
+                    "target": "19-nha_b_tang4_kgstkhoakinhte",
+                },
+            ],
             "infoHotspots": []
         },
         {
-            "id": "19-sanhchokinhte",
+            "id": "19-nha_b_tang4_kgstkhoakinhte",
             "name": "Sảnh T4(KGST khoa kinh tế)",
             "levels": [
                 {
@@ -527,12 +687,12 @@ var APP_DATA = {
                 "yaw": -1.66616756323038246,
                 "pitch": 0.0005946888690238,
                 "rotation": 0,
-                "target": "20-sanhchongoaingu",
+                "target": "20-nha_b_tang5_kgstkhoadulichngoaingu",
             }],
             "infoHotspots": []
         },
         {
-            "id": "20-sanhchongoaingu",
+            "id": "20-nha_b_tang5_kgstkhoadulichngoaingu",
             "name": "Sảnh T5(KGST khoa du lịch & ngoại ngữ)",
             "levels": [
                 {
@@ -563,18 +723,18 @@ var APP_DATA = {
                 "yaw": -1.46616756323038246,
                 "pitch": 0.0005946888690238,
                 "rotation": 3.1,
-                "target": "19-sanhchokinhte",
+                "target": "19-nha_b_tang4_kgstkhoakinhte",
             },
             {
                 "yaw": -2.25616756323038246,
                 "pitch": 0.0005946888690238,
                 "rotation": 3.1,
-                "target": "11-phongmaynhab",
+                "target": "11-nha_b_phongmay",
             }],
             "infoHotspots": []
         },
         {
-            "id": "21-sanhnhaa",
+            "id": "21-nha_a_sanh",
             "name": "Sảnh chính - Nhà A",
             "levels": [
                 {
@@ -585,9 +745,17 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
                 }
             ],
-            "faceSize": 75,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -597,7 +765,7 @@ var APP_DATA = {
             "infoHotspots": []
         },
         {
-            "id": "22-sanhtruocb",
+            "id": "22-nha_b_sanhtruoc",
             "name": "Sảnh trước - Nhà B",
             "levels": [
                 {
@@ -608,15 +776,36 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
                 }
             ],
-            "faceSize": 75,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
-            "linkHotspots": [],
+            "linkHotspots": [
+                {
+                    "yaw": 0,
+                    "pitch": 0,
+                    "rotation": 3.1,
+                    "target": "18-nha_b_sanhchinh",
+                },
+                {
+                    "yaw": 3,
+                    "pitch": 0,
+                    "rotation": 3.1,
+                    "target": "17-sanbongrongoaitroi",
+                },
+            ],
             "infoHotspots": []
         },
         {
@@ -683,8 +872,8 @@ var APP_DATA = {
             "infoHotspots": []
         },
         {
-            "id": "25-sanhtruyenthong",
-            "name": "Sảnh truyền thống",
+            "id": "25-xmay_trungtam",
+            "name": "Trung tâm xưởng may",
             "levels": [
                 {
                     "tileSize": 256,
@@ -694,9 +883,17 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
+                },
+                {
+                    "tileSize": 512,
+                    "size": 1024
+                },
+                {
+                    "tileSize": 512,
+                    "size": 2048
                 }
             ],
-            "faceSize": 75,
+            "faceSize": 2000,
             "initialViewParameters": {
                 "pitch": 0,
                 "yaw": 0,
@@ -781,29 +978,6 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 512
-                }
-            ],
-            "faceSize": 75,
-            "initialViewParameters": {
-                "pitch": 0,
-                "yaw": 0,
-                "fov": 1.5707963267948966
-            },
-            "linkHotspots": [],
-            "infoHotspots": []
-        },
-        {
-            "id": "29-vuontruong",
-            "name": "Vườn Trường",
-            "levels": [
-                {
-                    "tileSize": 256,
-                    "size": 256,
-                    "fallbackOnly": true
-                },
-                {
-                    "tileSize": 512,
-                    "size": 512
                 },
                 {
                     "tileSize": 512,
@@ -812,8 +986,7 @@ var APP_DATA = {
                 {
                     "tileSize": 512,
                     "size": 2048
-                },
-
+                }
             ],
             "faceSize": 2000,
             "initialViewParameters": {
@@ -825,7 +998,7 @@ var APP_DATA = {
             "infoHotspots": []
         },
         {
-            "id": "30-sanbongda",
+            "id": "29-sanbongda",
             "name": "Sân bóng đá",
             "levels": [
                 {
@@ -857,7 +1030,7 @@ var APP_DATA = {
             "infoHotspots": []
         },
         {
-            "id": "31-xdien_kgstkhoadien",
+            "id": "30-xdien_kgstkhoadien",
             "name": "Không gian sáng tạo-Khoa điện",
             "levels": [
                 {
@@ -889,12 +1062,12 @@ var APP_DATA = {
                 "yaw": 2.8,
                 "pitch": 0.3,
                 "rotation": 0,
-                "target": "32-xdien_hanhlang",
+                "target": "31-xdien_hanhlang",
             },],
             "infoHotspots": []
         },
         {
-            "id": "32-xdien_hanhlang",
+            "id": "31-xdien_hanhlang",
             "name": "Xưởng điện - hành lang",
             "levels": [
                 {
@@ -922,16 +1095,24 @@ var APP_DATA = {
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
-            "linkHotspots": [{
+            "linkHotspots": [
+                {
                 "yaw": 1.6,
                 "pitch": 0.14,
                 "rotation": 3.1,
-                "target": "33-xdien-phongthuchanh",
-            },],
+                "target": "32-xdien_phongthuchanh",
+                },
+                {
+                    "yaw": 1.6,
+                    "pitch": 0.14,
+                    "rotation": 3.1,
+                    "target": "30-xdien_kgstkhoadien",
+                },
+            ],
             "infoHotspots": []
         },
         {
-            "id": "33-xdien-phongthuchanh",
+            "id": "32-xdien_phongthuchanh",
             "name": "Xưởng điện - phòng thực hành",
             "levels": [
                 {
@@ -960,10 +1141,10 @@ var APP_DATA = {
                 "fov": 1.5707963267948966
             },
             "linkHotspots": [{
-                "yaw": -1.46616756323038246,
-                "pitch": 0.0005946888690238,
+                "yaw": 2.2616756323038246,
+                "pitch": 0.25005946888690238,
                 "rotation": 3.1,
-                "target": "32-xdien_hanhlang",
+                "target": "31-xdien_hanhlang",
             },],
             "infoHotspots": []
         },
