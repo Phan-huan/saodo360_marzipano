@@ -358,7 +358,14 @@ var APP_DATA = {
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
-            "linkHotspots": [],
+            "linkHotspots": [
+                {
+                    "yaw": 0.66616756323038246,
+                    "pitch": 0.0005946888690238,
+                    "rotation": 3.1,
+                    "target": "18-nha_b_sanhchinh",
+                }
+            ],
             "infoHotspots": []
         },
         {
@@ -389,7 +396,14 @@ var APP_DATA = {
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
-            "linkHotspots": [],
+            "linkHotspots": [
+                {
+                    "yaw": -0.45616756323038246,
+                    "pitch": 0.0005946888690238,
+                    "rotation": 3.1,
+                    "target": "20-nha_b_tang5_kgstkhoadulichngoaingu",
+                }
+            ],
             "infoHotspots": []
         },
         {
@@ -451,7 +465,14 @@ var APP_DATA = {
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
-            "linkHotspots": [],
+            "linkHotspots": [
+                {
+                    "yaw": -0.15,
+                    "pitch": 0,
+                    "rotation": 3.1,
+                    "target": "18-nha_b_sanhchinh",
+                },
+            ],
             "infoHotspots": []
         },
         {
@@ -482,7 +503,14 @@ var APP_DATA = {
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
-            "linkHotspots": [],
+            "linkHotspots": [
+                {
+                    "yaw": 0.40616756323038246,
+                    "pitch": 0.005946888690238,
+                    "rotation": 3.1,
+                    "target": "20-nha_b_tang5_kgstkhoadulichngoaingu",
+                },
+            ],
             "infoHotspots": []
         },
         {
@@ -642,7 +670,7 @@ var APP_DATA = {
                 },
                 {
                     "yaw": 1.48,
-                    "pitch": 0,
+                    "pitch": 0.05,
                     "rotation": 0,
                     "target": "10-nha_b_phonghop",
                 },
@@ -683,12 +711,20 @@ var APP_DATA = {
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
-            "linkHotspots": [{
-                "yaw": -1.66616756323038246,
-                "pitch": 0.0005946888690238,
-                "rotation": 0,
-                "target": "20-nha_b_tang5_kgstkhoadulichngoaingu",
-            }],
+            "linkHotspots": [
+                {
+                    "yaw": -1.45616756323038246,
+                    "pitch": 0.0005946888690238,
+                    "rotation": 0,
+                    "target": "20-nha_b_tang5_kgstkhoadulichngoaingu",
+                },
+                {
+                    "yaw": -1.66616756323038246,
+                    "pitch": 0.0005946888690238,
+                    "rotation": 3.1,
+                    "target": "10-nha_b_phonghop",
+                }
+            ],
             "infoHotspots": []
         },
         {
@@ -719,18 +755,26 @@ var APP_DATA = {
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
-            "linkHotspots": [{
-                "yaw": -1.46616756323038246,
-                "pitch": 0.0005946888690238,
-                "rotation": 3.1,
-                "target": "19-nha_b_tang4_kgstkhoakinhte",
-            },
-            {
-                "yaw": -2.25616756323038246,
-                "pitch": 0.0005946888690238,
-                "rotation": 3.1,
-                "target": "11-nha_b_phongmay",
-            }],
+            "linkHotspots": [
+                {
+                    "yaw": -1.67516756323038246,
+                    "pitch": 0.0515946888690238,
+                    "rotation": 3.1,
+                    "target": "19-nha_b_tang4_kgstkhoakinhte",
+                },
+                {
+                    "yaw": -2.25616756323038246,
+                    "pitch": 0.005946888690238,
+                    "rotation": 3.1,
+                    "target": "11-nha_b_phongmay",
+                },
+                {
+                    "yaw": -1.46616756323038246,
+                    "pitch": 0.0005946888690238,
+                    "rotation": 0,
+                    "target": "14-nha_b_phongtruyenthong",
+                }
+            ],
             "infoHotspots": []
         },
         {
@@ -837,7 +881,14 @@ var APP_DATA = {
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
-            "linkHotspots": [],
+            "linkHotspots": [
+                {
+                    "yaw": -0.32616756323038246,
+                    "pitch": 0.04,
+                    "rotation": 3.1,
+                    "target": "27-trungtamhoitruong",
+                },
+            ],
             "infoHotspots": []
         },
         {
@@ -868,7 +919,26 @@ var APP_DATA = {
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
-            "linkHotspots": [],
+            "linkHotspots": [
+                {
+                    "yaw": 3.11616756323038246,
+                    "pitch": 0.2005946888690238,
+                    "rotation": 3.1,
+                    "target": "21-nha_a_sanh",
+                },
+                {
+                    "yaw": 0.66616756323038246,
+                    "pitch": 0.13,
+                    "rotation": 3.1,
+                    "target": "28-trungtamthuvien",
+                },
+                {
+                    "yaw": -0.66616756323038246,
+                    "pitch": 0.13,
+                    "rotation": 3.1,
+                    "target": "28-trungtamthuvien",
+                }
+            ],
             "infoHotspots": []
         },
         {
@@ -994,7 +1064,26 @@ var APP_DATA = {
                 "yaw": 0,
                 "fov": 1.5707963267948966
             },
-            "linkHotspots": [],
+            "linkHotspots": [
+                {
+                    "yaw": 0.32616756323038246,
+                    "pitch": 0.04,
+                    "rotation": 3.1,
+                    "target": "24-sanhtruocthuvien",
+                },
+                {
+                    "yaw": -0.32616756323038246,
+                    "pitch": 0.04,
+                    "rotation": 3.1,
+                    "target": "24-sanhtruocthuvien",
+                },
+                {
+                    "yaw": 4.32616756323038246,
+                    "pitch": 0.04,
+                    "rotation": 4.7,
+                    "target": "23-sanhtruochoitruong_daiphunnuoc",
+                },
+            ],
             "infoHotspots": []
         },
         {
@@ -1097,10 +1186,10 @@ var APP_DATA = {
             },
             "linkHotspots": [
                 {
-                "yaw": 1.6,
-                "pitch": 0.14,
-                "rotation": 3.1,
-                "target": "32-xdien_phongthuchanh",
+                    "yaw": 1.6,
+                    "pitch": 0.14,
+                    "rotation": 3.1,
+                    "target": "32-xdien_phongthuchanh",
                 },
                 {
                     "yaw": 1.6,
