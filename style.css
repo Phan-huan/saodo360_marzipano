@@ -81,7 +81,7 @@ body.multiple-scenes.mobile #titleBar {
     padding: 5px;
 
     background-color: transparent;
-    color: #d70606;
+    color: #b40000;
 
     -moz-user-select: text;
     -webkit-user-select: text;
@@ -706,12 +706,6 @@ body.view-control-buttons .viewControlButton {
     margin-left: 105px;
 }
 
-.mainMenu {
-    background-color: #3838f6;
-    width: 100%;
-    height: 35px;
-    text-align: left;
-}
 
 .text_mainMenu {
     padding-top: 4px;
@@ -912,7 +906,6 @@ background-color: transparent;
 
 #sceneList .scene {
     display: block;
-
     height: 30px;
     text-decoration: none;
 }
@@ -927,7 +920,7 @@ background-color: transparent;
     text-overflow: ellipsis;
     white-space: nowrap;
     list-style: none;
-    color: white;
+    color: #010193;
     margin-left: 20px;
 }
 
@@ -936,7 +929,7 @@ background-color: transparent;
 }
 
 .no-touch #sceneList .scene:hover {
-    background-color: rgba(204, 33, 33, 0.7);
+    background-color: rgba(108, 108, 108, 0.7);
 
 
 }
@@ -945,10 +938,16 @@ background-color: transparent;
 }
 
 #sceneList .scene.current {
-    background-color: rgba(204, 33, 33, 0.7);
-
+    background-color: rgba(108, 108, 108, 0.7);
 
 }
+#sceneList .scene.current .text{
+    color: white;
+}
+.touch #sceneList .scene{
+    color: white;
+}
+
 @media (max-width:600px) {
     .abc{
         width: 50%;
@@ -959,4 +958,11 @@ background-color: transparent;
 }
 .modal-body p{
     font-size: 19px;
+}
+.CodeMirror {
+    height: 300px;
+    width: 500px;
+}
+.menu-bottom .content .button{
+    color: white;
 }
