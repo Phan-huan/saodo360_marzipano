@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: saodo360-app
+    ports:
+      - "8888:80"
+    environment:
+      - DB_SERVER=db
+      - DB_USER=root
+      - DB_PASSWORD=rootpassword
+      - DB_NAME=saodo360
+    depends_on:
+      - db
+    networks:
+      - saodo360-network
+
+  db:
+    image: mysql:5.7
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    container_name: saodo360-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_DATABASE=saodo360
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./saodo360.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - saodo360-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: saodo360-phpmyadmin
+    environment:
+      - PMA_HOST=db
+      - MYSQL_ROOT_PASSWORD=rootpassword
+    ports:
+      - "8889:80"
+    depends_on:
+      - db
+    networks:
+      - saodo360-network
+
+volumes:
+  db_data:
+
+networks:
+  saodo360-network:
+    driver: bridge

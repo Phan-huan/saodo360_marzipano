@@ -13,8 +13,6 @@ include 'admin/dbconnection.php';
 
     <link rel="stylesheet" href="vendor/reset.min.css">
     <link rel="stylesheet" href="style.css">
-
-
     <!--    bootstrap-->
     <!--     Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -41,13 +39,13 @@ include 'admin/dbconnection.php';
 
 </head>
 <body class="multiple-scenes ">
-<!--<div id="loading" class="fullwrapper preloading">-->
-<!--    <div id="preload" class="preload-container"-->
-<!--         style="display: table-cell; vertical-align: middle; text-align: center; color: white; font-size: 30px; padding: 50px;">-->
-<!--        <img style="height: 300px;margin-top: 5%" src="img/logoSaodo.png" alt="">-->
-<!--        <div class="spinner-2"></div>-->
-<!--    </div>-->
-<!--</div>-->
+<div id="loading" class="fullwrapper preloading">
+    <div id="preload" class="preload-container"
+         style="display: table-cell; vertical-align: middle; text-align: center; color: white; font-size: 30px; padding: 50px;">
+        <img style="height: 300px;margin-top: 5%" src="img/logoSaodo.png" alt="">
+        <div class="spinner-2"></div>
+    </div>
+</div>
 
 <div id="pano"></div>
 <div class="layout" style="position: absolute;">

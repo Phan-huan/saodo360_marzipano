@@ -840,7 +840,7 @@ body.view-control-buttons .viewControlButton {
 .mobile .owl-carousel .item .text {
     text-align: center;
     position: absolute;
-background-color: transparent;
+    background-color: transparent;
     color: white;
     width: 100%;
     bottom: 0;

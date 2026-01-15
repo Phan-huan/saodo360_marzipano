@@ -1,4 +1,4 @@
-                                                                                                                                                                                                                                                                                                                                                                                                            var APP_DATA = {
+                                                                                                                                                                                var APP_DATA = {
     "scenes": [
 
         {
@@ -1202,7 +1202,7 @@
         },
         {
             "id": "32-xdien_phongthuchanh",
-            "name": "Xưởng điện - Trung tâm thực hành thực nghiệm",
+            "name": "Xưởng điện - phòng thực hành",
             "levels": [
                 {
                     "tileSize": 256,
@@ -1237,40 +1237,9 @@
             },],
             "infoHotspots": []
         },
-      {
-            "id": "33-demo",
-            "name": "demo",
-            "levels": [
-                {
-                    "tileSize": 256,
-                    "size": 256,
-                    "fallbackOnly": true
-                },
-                {
-                    "tileSize": 512,
-                    "size": 512
-                },
-                {
-                    "tileSize": 512,
-                    "size": 1024
-                },
-                {
-                    "tileSize": 512,
-                    "size": 2048
-                }
-            ],
-            "faceSize": 2000,
-            "initialViewParameters": {
-                "pitch": 0,
-                "yaw": 0,
-                "fov": 1.5707963267948966
-            },
-            "linkHotspots": [],
-            "infoHotspots": []
-        },
-
-
-
+      	
+      
+      
     ],
     "name": "Project Title",
     "settings": {
@@ -1279,4 +1248,4 @@
         "fullscreenButton": true,
         "viewControlButtons": true
     }
-};
+};    
